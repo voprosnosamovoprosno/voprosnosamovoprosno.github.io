@@ -45,7 +45,23 @@
     <label><input type="radio" name="?2?" value="солидно">?????солидно?</label><br>
     <label><input type="radio" name="?2?" value="насущно">?????насущно?</label><br>
     <label><input type="radio" name="?2?" value="озарённо">?????озарённо?</label><br>
-    
+
+    <label><input type="radio" name="?3?" value="собранно">???????собранно?</label><br>
+    <label><input type="radio" name="?3?" value="адаптивно">???????адаптивно?</label><br>
+    <label><input type="radio" name="?3?" value="мотивационно">???????мотивационно?</label><br>
+    <label><input type="radio" name="?3?" value="обиходно">???????обиходно?</label><br>
+    <label><input type="radio" name="?3?" value="воодушевлённо">???????воодушевлённо?</label><br>
+    <label><input type="radio" name="?3?" value="ободрительно">???????ободрительно?</label><br>
+    <label><input type="radio" name="?3?" value="приверженно">???????приверженно?</label><br>
+    <label><input type="radio" name="?3?" value="решительно">???????решительно?</label><br>
+    <label><input type="radio" name="?3?" value="однозначно">???????однозначно?</label><br>
+    <label><input type="radio" name="?3?" value="стратегично">???????стратегично?</label><br>
+    <label><input type="radio" name="?3?" value="надёжно">???????надёжно?</label><br>
+    <label><input type="radio" name="?3?" value="оплотно">???????оплотно?</label><br>
+
+    <div>????????????????</div>
+
+  <!--
     <style>
       .voprosnosamovoprosnosamovoprosno {
          list-style-type: none;
@@ -53,8 +69,7 @@
          }
     </style>
     
-    <ul class="voprosnosamovoprosnosamovoprosno">
-   <!--  
+    <ul class="voprosnosamovoprosnosamovoprosno">  
       <li>?влюблённо?</li>
       <li>?обнадёженно?</li>
       <li>?признательно?</li>
@@ -87,7 +102,6 @@
       <li>?????солидно?</li>
       <li>?????насущно?</li>
       <li>?????озарённо?</li>
-   -->
       <li>???????собранно?</li>
       <li>???????адаптивно?</li>
       <li>???????мотивационно?</li>
@@ -99,10 +113,10 @@
       <li>???????однозначно?</li>
       <li>???????стратегично?</li>
       <li>???????надёжно?</li>
-      <li>???????оплотно?</li>
+      <li>???????оплотно?</li>    
       <li>????????????????</li>
     </ul>
-
+-->
     <style>
       .voprosnosamovoprosno {
         position: absolute;
@@ -142,6 +156,11 @@
       var vsv2 = document.querySelectorAll('input[type=radio][name="?2?"]');
           vsv2.forEach(radio => radio.addEventListener('change', function() {
             document.getElementById("всв2").innerHTML=radio.value
+          }));
+
+      var vsv3 = document.querySelectorAll('input[type=radio][name="?3?"]');
+          vsv3.forEach(radio => radio.addEventListener('change', function() {
+            document.getElementById("всв3").innerHTML=radio.value
           }));
       
     </script>
