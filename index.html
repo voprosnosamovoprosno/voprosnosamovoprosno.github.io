@@ -33,6 +33,19 @@
     <label><input type="radio" name="?1?" value="наивно">???наивно?</label><br>
     <label><input type="radio" name="?1?" value="отлично">???отлично?</label><br>
     
+    <label><input type="radio" name="?2?" value="сознательно">?????сознательно?</label><br>
+    <label><input type="radio" name="?2?" value="аналитично">?????аналитично?</label><br>
+    <label><input type="radio" name="?2?" value="ментально">?????ментально?</label><br>
+    <label><input type="radio" name="?2?" value="объективно">?????объективно?</label><br>
+    <label><input type="radio" name="?2?" value="вариационно">?????вариационно?</label><br>
+    <label><input type="radio" name="?2?" value="осознанно">?????осознанно?</label><br>
+    <label><input type="radio" name="?2?" value="понятно">?????понятно?</label><br>
+    <label><input type="radio" name="?2?" value="рассудочно">?????рассудочно?</label><br>
+    <label><input type="radio" name="?2?" value="осмысленно">?????осмысленно?</label><br>
+    <label><input type="radio" name="?2?" value="солидно">?????солидно?</label><br>
+    <label><input type="radio" name="?2?" value="насущно">?????насущно?</label><br>
+    <label><input type="radio" name="?2?" value="озарённо">?????озарённо?</label><br>
+    
     <style>
       .voprosnosamovoprosnosamovoprosno {
          list-style-type: none;
@@ -62,7 +75,6 @@
       <li>???симпатично?</li>
       <li>???наивно?</li>
       <li>???отлично?</li> 
-   -->
       <li>?????сознательно?</li>
       <li>?????аналитично?</li>
       <li>?????ментально?</li>
@@ -75,6 +87,7 @@
       <li>?????солидно?</li>
       <li>?????насущно?</li>
       <li>?????озарённо?</li>
+   -->
       <li>???????собранно?</li>
       <li>???????адаптивно?</li>
       <li>???????мотивационно?</li>
@@ -102,30 +115,35 @@
     <div class="voprosnosamovoprosno">
 
     <div>?вопросно</div>
-    <div> самовопросно</div>
-    <div> самовопросно?</div>
+    <div>самовопросно</div>
+    <div>самовопросно?</div>
     <br>
     <div id="всв0">???</div>
-    <div id="всв1"> ????</div>
-    <div id="всв2"> ??????</div>
-    <div id="всв3"> ?????????</div>
+    <div id="всв1">????</div>
+    <div id="всв2">??????</div>
+    <div id="всв3">?????????</div>
     <br>
     <div id="всв4">???</div>
-    <div id="всв5"> ????вопросно</div>
+    <div id="всв5">????вопросно</div>
     <div> самовопросно?</div>
       
     <script>
 
-      var vsv0radios = document.querySelectorAll('input[type=radio][name="?0?"]');
-          vsv0radios.forEach(radio => radio.addEventListener('change', function() {
+      var vsv0 = document.querySelectorAll('input[type=radio][name="?0?"]');
+          vsv0.forEach(radio => radio.addEventListener('change', function() {
             document.getElementById("всв0").innerHTML=radio.value
           }));
 
-      var vsv1radios = document.querySelectorAll('input[type=radio][name="?1?"]');
-          vsv1radios.forEach(radio => radio.addEventListener('change', function() {
-            document.getElementById("всв1").innerHTML=" "+radio.value
+      var vsv1 = document.querySelectorAll('input[type=radio][name="?1?"]');
+          vsv1.forEach(radio => radio.addEventListener('change', function() {
+            document.getElementById("всв1").innerHTML=radio.value
           }));
-  
+
+      var vsv2 = document.querySelectorAll('input[type=radio][name="?1?"]');
+          vsv2.forEach(radio => radio.addEventListener('change', function() {
+            document.getElementById("всв2").innerHTML=radio.value
+          }));
+      
     </script>
 
     <br>
