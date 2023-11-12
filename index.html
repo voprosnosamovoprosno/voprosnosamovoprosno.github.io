@@ -11,17 +11,28 @@
   </head>
   <body>
     
-    <label><input type="radio" name="??" value="?влюблённо">?влюблённо?</label><br>
-    <label><input type="radio" name="??" value="?обнадёженно">?обнадёженно?</label><br>
-    <label><input type="radio" name="??" value="?признательно">?признательно?</label><br>
-    <label><input type="radio" name="??" value="?радостно">?радостно?</label><br>
-    <label><input type="radio" name="??" value="?очарованно">?очарованно?</label><br>
-    <label><input type="radio" name="??" value="?свободно">?свободно?</label><br>
-    <label><input type="radio" name="??" value="?новационно">?новационно?</label><br>
-    <label><input type="radio" name="??" value="?оптимистично">?оптимистично?</label><br>
+    <label><input type="radio" name="?0?" value="?влюблённо">?влюблённо?</label><br>
+    <label><input type="radio" name="?0?" value="?обнадёженно">?обнадёженно?</label><br>
+    <label><input type="radio" name="?0?" value="?признательно">?признательно?</label><br>
+    <label><input type="radio" name="?0?" value="?радостно">?радостно?</label><br>
+    <label><input type="radio" name="?0?" value="?очарованно">?очарованно?</label><br>
+    <label><input type="radio" name="?0?" value="?свободно">?свободно?</label><br>
+    <label><input type="radio" name="?0?" value="?новационно">?новационно?</label><br>
+    <label><input type="radio" name="?0?" value="?оптимистично">?оптимистично?</label><br>
 
-    <label><input type="radio" name="э" value="???склонно">???склонно?</label><br>
-   
+    <label><input type="radio" name="?1?" value="???склонно">???склонно?</label><br>
+    <label><input type="radio" name="?1?" value="???акцентированно">???акцентированно?</label><br>
+    <label><input type="radio" name="?1?" value="???миролюбно">???миролюбно?</label><br>
+    <label><input type="radio" name="?1?" value="???отрадно">???отрадно?</label><br>
+    <label><input type="radio" name="?1?" value="???восхищённо">???восхищённо?</label><br>
+    <label><input type="radio" name="?1?" value="???одобрительно">???одобрительно?</label><br>
+    <label><input type="radio" name="?1?" value="???приятно">???приятно?</label><br>
+    <label><input type="radio" name="?1?" value="???радетельно">???радетельно?</label><br>
+    <label><input type="radio" name="?1?" value="???осчастливленно">???осчастливленно?</label><br>
+    <label><input type="radio" name="?1?" value="???симпатично">???симпатично?</label><br>
+    <label><input type="radio" name="?1?" value="???наивно">???наивно?</label><br>
+    <label><input type="radio" name="?1?" value="???отлично">???отлично?</label><br>
+    
     <style>
       .voprosnosamovoprosnosamovoprosno {
          list-style-type: none;
@@ -105,9 +116,14 @@
       
     <script>
 
-      var radios = document.querySelectorAll('input[type=radio][name="??"]');
-          radios.forEach(radio => radio.addEventListener('change', function() {
+      var vsv0radios = document.querySelectorAll('input[type=radio][name="?0?"]');
+          vsv0radios.forEach(radio => radio.addEventListener('change', function() {
             document.getElementById("всв0").innerHTML=radio.value
+          }));
+
+      var vsv1radios = document.querySelectorAll('input[type=radio][name="?1?"]');
+          vsv1radios.forEach(radio => radio.addEventListener('change', function() {
+            document.getElementById("всв1").innerHTML=radio.value
           }));
   
     </script>
