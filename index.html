@@ -61,6 +61,30 @@
 
     <div>????????????????</div>
 
+    <style>
+      .vsv4div {
+         position: absolute;
+         top: 71%;
+         left: 32%;
+         }
+    </style>
+
+    <div class=vsv4>
+
+      <label><input type="radio" name="?4?" value="?сущностно">?сущностно?</label><br>
+      <label><input type="radio" name="?4?" value="?аутентично">?аутентично?</label><br>
+      <label><input type="radio" name="?4?" value="?медитативно">?медитативно?</label><br>
+      <label><input type="radio" name="?4?" value="?основоположно">?основоположно?</label><br>
+      <label><input type="radio" name="?4?" value="?вдохновительно">?вдохновительно?</label><br>
+      <label><input type="radio" name="?4?" value="?ознаменованно">?ознаменованно?</label><br>
+      <label><input type="radio" name="?4?" value="?психологично">?психологично?</label><br>
+      <label><input type="radio" name="?4?" value="?реально">?реально?</label><br>
+      <label><input type="radio" name="?4?" value="?очевидно">?очевидно?</label><br>
+      <label><input type="radio" name="?4?" value="?ситуационно">?ситуационно?</label><br>
+      <label><input type="radio" name="?4?" value="?настроенно">?настроенно?</label><br>
+      <label><input type="radio" name="?4?" value="?одухотворённо">?одухотворённо?</label><br>
+      
+    </div>
   <!--
     <style>
       .voprosnosamovoprosnosamovoprosno {
@@ -161,6 +185,11 @@
       var vsv3 = document.querySelectorAll('input[type=radio][name="?3?"]');
           vsv3.forEach(radio => radio.addEventListener('change', function() {
             document.getElementById("всв3").innerHTML=radio.value
+          }));
+
+      var vsv4 = document.querySelectorAll('input[type=radio][name="?4?"]');
+          vsv4.forEach(radio => radio.addEventListener('change', function() {
+            document.getElementById("всв4").innerHTML=radio.value
           }));
       
     </script>
@@ -277,7 +306,7 @@
     <div>самовопросно?</div>
 
     </div>
-
+<!--
     <style>
       .vssssamovoprosnoul {
          list-style-type: none;
@@ -302,7 +331,7 @@
       <li>?настроенно?</li>
       <li>?одухотворённо?</li>
     </ul>
-
+-->
     <style>
       .systemsamovoprosnoul {
          list-style-type: none;
