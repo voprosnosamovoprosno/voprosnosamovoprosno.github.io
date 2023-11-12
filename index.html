@@ -87,7 +87,30 @@
     </style>
     
     <div class="voprosnosamovoprosno">
-    
+
+    <p>?вопросно</p>
+    <p>самовопросно</p>
+    <p>самовопросно?</p>
+    <br>
+    <p id="в0">???</p>
+    <p id="св1">????</p>
+    <p id="св2">??????</p>
+    <p id="св3">?????????</p>
+    <p>????????????????</p>
+    <p id="св4">???</p>
+    <p id="св5">????вопросно</p>
+    <p>самовопросно?</p>
+      
+    <script>
+
+      var radios = document.querySelectorAll('input[type=radio][name="ч"]');
+          radios.forEach(radio => radio.addEventListener('change', function() {
+            document.getElementById("в0").innerHTML=radio.value+"?"
+          }));
+  
+    </script>
+
+    <br>
     <div>?вопросно</div>
     <div>самовопросно</div>
     <div>самовопросно?</div>
@@ -198,29 +221,6 @@
     <div>?вопросно</div>
     <div>самовопросно?</div>
 
-    <br>
-    <p>?вопросно</p><br>
-    <p>самовопросно</p><br>
-    <p>самовопросно?</p><br>
-    <br>
-    <p id="в0">???</p><br>
-    <p id="св1">????</p><br>
-    <p id="св2">??????</p><br>
-    <p id="св3">?????????</p><br>
-    <p>????????????????</p><br>
-    <p id="св4">???</p><br>
-    <p id="св5">????вопросно</p><br>
-    <p>самовопросно?</p>
-   
-    <script>
-
-      var radios = document.querySelectorAll('input[type=radio][name="ч"]');
-          radios.forEach(radio => radio.addEventListener('change', function() {
-            document.getElementById("в0").innerHTML=radio.value+"?"
-          }));
-  
-    </script>
-    
     </div>
 
     <style>
