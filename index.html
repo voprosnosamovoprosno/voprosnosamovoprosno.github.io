@@ -92,7 +92,7 @@
     <div>самовопросно</div>
     <div>самовопросно?</div>
     <br>
-    <p id="в0">???</p>
+    <div id="в0">???</div>
     <p id="св1">????</p>
     <p id="св2">??????</p>
     <p id="св3">?????????</p>
@@ -105,7 +105,7 @@
 
       var radios = document.querySelectorAll('input[type=radio][name="ч"]');
           radios.forEach(radio => radio.addEventListener('change', function() {
-            document.getElementById("в0").innerHTML=radio.value+"?"
+            document.getElementById("в0").innerHTML=radio.value
           }));
   
     </script>
