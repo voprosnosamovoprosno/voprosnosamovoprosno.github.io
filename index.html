@@ -64,8 +64,15 @@
     <style>
       .vsv4div {
          position: absolute;
-         top: 72%;
+         top: 73%;
          left: 38%;
+         font-size: x-large;
+         }
+      
+      .vsv5div {
+         position: absolute;
+         top: 73%;
+         left: 62%;
          font-size: x-large;
          }
     </style>
@@ -86,6 +93,24 @@
       <label><input type="radio" name="?4?" value="?одухотворённо">?одухотворённо?</label><br>
       
     </div>
+
+    <div class="vsv5div">
+
+      <label><input type="radio" name="?5?" value="свое">???свое??субъектно?</label><br>
+      <label><input type="radio" name="?5?" value="архи">???архи??антропогенно?</label><br>
+      <label><input type="radio" name="?5?" value="мета">???мета??метафорично?</label><br>
+      <label><input type="radio" name="?5?" value="онто">???онто??органично?</label><br>
+      <label><input type="radio" name="?5?" value="вехо">???вехо??витально?</label><br>
+      <label><input type="radio" name="?5?" value="орто">???орто??обзорно?</label><br>
+      <label><input type="radio" name="?5?" value="пред">???пред??питательно?</label><br>
+      <label><input type="radio" name="?5?" value="рост">???рост??раритетно?</label><br>
+      <label><input type="radio" name="?5?" value="окто">???окто??оснащённо?</label><br>
+      <label><input type="radio" name="?5?" value="спец">???спец??сервисно?</label><br>
+      <label><input type="radio" name="?5?" value="ново">???ново??номинационно?</label><br>
+      <label><input type="radio" name="?5?" value="орфо">???орфо??организованно?</label><br>
+    
+    </div>
+    
   <!--
     <style>
       .voprosnosamovoprosnosamovoprosno {
@@ -191,6 +216,11 @@
       var vsv4 = document.querySelectorAll('input[type=radio][name="?4?"]');
           vsv4.forEach(radio => radio.addEventListener('change', function() {
             document.getElementById("всв4").innerHTML=radio.value
+          }));
+
+      var vsv5 = document.querySelectorAll('input[type=radio][name="?5?"]');
+          vsv5.forEach(radio => radio.addEventListener('change', function() {
+            document.getElementById("всв5").innerHTML=radio.value+"вопросно"
           }));
       
     </script>
@@ -332,7 +362,7 @@
       <li>?настроенно?</li>
       <li>?одухотворённо?</li>
     </ul>
--->
+
     <style>
       .systemsamovoprosnoul {
          list-style-type: none;
@@ -357,7 +387,8 @@
       <li>???ново??номинационно?</li>
       <li>???орфо??организованно?</li>
     </ul>
-
+-->
+    <br>
     <div>
       ?voprosnosamovoprosno@gmail.com?
     </div>
