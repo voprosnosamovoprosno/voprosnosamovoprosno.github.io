@@ -13,8 +13,6 @@
         input[type=radio]#vsvr { 
             accent-color: grey; 
           }
-
-         @media (orientation: portrait)
      
    </style>
 
@@ -161,6 +159,8 @@
       
     <script>
 
+      screen.orientation.lock(portrait-primary);
+      
       var vsv0 = document.querySelectorAll('input[type=radio][name="?0?"]');
           vsv0.forEach(radio => radio.addEventListener('change', function() {
             document.getElementById("всв0").innerHTML=radio.value
