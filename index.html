@@ -94,7 +94,7 @@
 
     <style>
       .voprosnosamovoprosnoselect {
-        font-size: xx-large;
+        font-size: x-large;
         color: black;
       }
     </style>
@@ -199,13 +199,24 @@
     <div>самовопросно?</div>
 
     <br>
-    <p id="p0">??</p>
+    <p>?вопросно</p><br>
+    <p>самовопросно</p><br>
+    <p>самовопросно?</p><br>
+    <br>
+    <p id="в0">???</p><br>
+    <p id="св1">????</p><br>
+    <p id="св2">??????</p><br>
+    <p id="св3">?????????</p><br>
+    <p>????????????????</p><br>
+    <p id="св4">???</p><br>
+    <p id="св5">????вопросно</p><br>
+    <p>самовопросно?</p>
    
     <script>
 
       var radios = document.querySelectorAll('input[type=radio][name="ч"]');
           radios.forEach(radio => radio.addEventListener('change', function() {
-            document.getElementById("p0").innerHTML=radio.value+"?"
+            document.getElementById("в0").innerHTML=radio.value+"?"
           }));
   
     </script>
