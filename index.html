@@ -19,17 +19,6 @@
     <label><input type="radio" name="ч" value="?свободно">?свободно?</label><br>
     <label><input type="radio" name="ч" value="?новационно">?новационно?</label><br>
     <label><input type="radio" name="ч" value="?оптимистично">?оптимистично?</label><br>
-
-    <p id="p0">??</p>
-   
-    <script>
-
-      var radios = document.querySelectorAll('input[type=radio][name="ч"]');
-          radios.forEach(radio => radio.addEventListener('change', function() {
-            document.getElementById("p0").innerHTML=radio.value+"?"
-          }));
-  
-    </script>
       
     <style>
       .voprosnosamovoprosnosamovoprosno {
@@ -208,6 +197,18 @@
 
     <div>?вопросно</div>
     <div>самовопросно?</div>
+
+    <br>
+    <p id="p0">??</p>
+   
+    <script>
+
+      var radios = document.querySelectorAll('input[type=radio][name="ч"]');
+          radios.forEach(radio => radio.addEventListener('change', function() {
+            document.getElementById("p0").innerHTML=radio.value+"?"
+          }));
+  
+    </script>
     
     </div>
 
