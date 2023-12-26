@@ -207,7 +207,16 @@
 
       var vss3 = document.querySelectorAll('input[type=radio][name="?3?"]');
           vss3.forEach(radio => radio.addEventListener('change', function() {
-            document.getElementById("всс3").innerHTML=radio.value
+            let vss3v=radio.value;
+            if (document.getElementById("всс8").style.display == 'block')
+            { 
+                vss3v=vss3v.substring(0, vss3v.length-1)+" ";
+            }
+            if (document.getElementById("vsstbid").style.display == 'block')
+            {
+                vss3v=vss3v.substring(0, vss3v.length-1)+" ";
+            }
+            document.getElementById("всс3").innerHTML=vss3v;
           }));
 
       var vss4 = document.querySelectorAll('input[type=radio][name="?4?"]');
