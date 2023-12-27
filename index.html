@@ -277,13 +277,10 @@
                else {
                    document.getElementById("всс7").style.display='block';
                    document.getElementById("всс8").style.display='none';
-                   if(vss7s[vss7s.length-1]=="?")
+                   if(vss7s[vss7s.length-1]!="?")
                    {
-                       document.getElementById("всс7").innerHTML=vss7s;
+                       vss7s=vss7s+"?";
                    }
-                    else {
-                       document.getElementById("всс7").innerHTML=vss7s+"?";
-                    }
                }
         }
         else {
@@ -295,19 +292,19 @@
                          vss7s=vss7s.substring(0, vss7s.length-1);
                     }
                     document.getElementById("всс7").style.display='block';
-                    document.getElementById("всс7").innerHTML=vss7s;
                }
                else {
                     document.getElementById("всс7").style.display='none';
                }
-               if(vss8s[vss8s.length-1]=="?")
+               if(vss8s[vss8s.length-1]!="?")
                {
-                    document.getElementById("всс8").innerHTML=vss8s;
-               }
-               else {
-                    document.getElementById("всс8").innerHTML=vss8s+"?";
+                    vss8s=vss8s+"?";
                }
           }
+        document.getElementById("всс7").innerHTML=vss7s;
+        document.getElementById("всс8").innerHTML=vss8s;
+        document.getElementById("vsstid7").value=vss7s;
+        document.getElementById("vsstid8").value=vss8s;
         document.getElementById("vsstid7").style.display='none';
         document.getElementById("vsstid8").style.display='none';
         document.getElementById("vsstbid").style.display='none';
