@@ -287,7 +287,6 @@
                }
         }
         else {
-               document.getElementById("всс7").style.display='block';
                document.getElementById("всс8").style.display='block';
                if(vss7s.length>0)
                {
@@ -295,7 +294,11 @@
                     {
                          vss7s=vss7s.substring(0, vss7s.length-1);
                     }
+                    document.getElementById("всс7").style.display='block';
                     document.getElementById("всс7").innerHTML=vss7s;
+               }
+               else {
+                    document.getElementById("всс7").style.display='none';
                }
                if(vss8s[vss8s.length-1]=="?")
                {
