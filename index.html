@@ -289,13 +289,20 @@
         else {
                document.getElementById("всс7").style.display='block';
                document.getElementById("всс8").style.display='block';
-               document.getElementById("всс7").innerHTML=document.getElementById("vsstid7").value;
+               if(vss7s.length>0)
+               {
+                    if(vss7s[vss7s.length-1]=="?")
+                    {
+                         vss7s=vss7s.substring(0, vss7s.length-1);
+                    }
+                    document.getElementById("всс7").innerHTML=vss7s;
+               }
                if(vss8s[vss8s.length-1]=="?")
                {
-                 document.getElementById("всс8").innerHTML=document.getElementById("vsstid8").value;
+                    document.getElementById("всс8").innerHTML=document.getElementById("vsstid8").value;
                }
                else {
-                 document.getElementById("всс8").innerHTML=document.getElementById("vsstid8").value+"?";
+                    document.getElementById("всс8").innerHTML=document.getElementById("vsstid8").value+"?";
                }
           }
         document.getElementById("vsstid7").style.display='none';
