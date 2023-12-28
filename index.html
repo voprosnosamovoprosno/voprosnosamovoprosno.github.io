@@ -349,8 +349,11 @@
       function vssuarbf(vssrbn){
           alert(vssrbn);
           let vssrbl = document.getElementsByName(vssrbn);
+          alert(vssrbl.length);
               for(let vssi=0; vssi<vssrbl.length; vssi++)
-                 vssrbl[i].checked = false;
+                {    
+                    vssrbl[i].checked = false;
+                }
           alert(vssi);
       }
       
