@@ -347,12 +347,9 @@
           vsstbv.addEventListener('click', vsstbf);
 
       function vssuarbf(vssrbn){
-          alert(vssrbn);
           let vssrbl=document.getElementsByName(vssrbn);
-          alert(vssrbl.length);
               for(let vssi=0; vssi<vssrbl.length; vssi++)
                 {    
-                    alert(vssrbl[vssi].checked);
                     vssrbl[vssi].checked=false;
                 }
       }
@@ -414,7 +411,11 @@
               document.getElementById("vsstbid").style.display='none';
 
               vssuarbf("?0?");
-              
+              vssuarbf("?1?");
+              vssuarbf("?2?");
+              vssuarbf("?3?");
+              vssuarbf("?4?");
+              vssuarbf("?5?");
           }
       }
         
