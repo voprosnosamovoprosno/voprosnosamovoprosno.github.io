@@ -348,13 +348,12 @@
 
       function vssuarbf(vssrbn){
           alert(vssrbn);
-          let vssrbl = document.getElementsByName(vssrbn);
+          let vssrbl=document.getElementsByName(vssrbn);
           alert(vssrbl.length);
               for(let vssi=0; vssi<vssrbl.length; vssi++)
                 {    
-                    alert(vssi);
-                    alert(vssrbl[i].checked);
-                    vssrbl[i].checked = false;
+                    alert(vssrbl[vssi].checked);
+                    vssrbl[vssi].checked=false;
                 }
       }
       
