@@ -58,10 +58,6 @@
         font-size: x-large;
         color: black;
        }
-
-      .vsstdiv {
-        display: none;
-       }
       
       .vsst {
         font-size: x-large;
@@ -194,7 +190,9 @@
       <div id="всс4">???</div>
       <div id="всс5">????вопросно</div>
       <div> самовопросно?</div>
-      
+       
+    </div> 
+    
     <script>
       
       var vss0 = document.querySelectorAll('input[type=radio][name="?0?"]');
@@ -310,12 +308,10 @@
         document.getElementById("vsstbid").style.display='none';
       }
       
-      var vsstbv = document.querySelector('.vsstb');
+      var vsstbv = document.getElementById("vsstbid");
           vsstbv.addEventListener('click', vsstbf);
       
-     </script>
-      
-    </div>    
+     </script>   
       
   </body>
 </html>
