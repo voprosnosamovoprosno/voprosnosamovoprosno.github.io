@@ -176,6 +176,8 @@
       <label><input type="radio" id="vssr" name="?5?" value="спец">???спец??сервисно?</label><br>
       <label><input type="radio" id="vssr" name="?5?" value="ново">???ново??номинационно?</label><br>
       <label><input type="radio" id="vssr" name="?5?" value="орфо">???орфо??организованно?</label><br>
+
+      <button class="vssb" id="vssvssb">?всс? ?всс?</button>
     
     </div>
 
@@ -196,7 +198,7 @@
       <br>
       <div id="vssvss4" class="vsstdiv">???</div>
       <div id="vssvss5" class="vsstdiv">????вопросно</div>
-      <div>самовопросно?</div>
+      <div id="vssvss12" class="vsstdiv">самовопросно?</div>
        
     </div>
 
@@ -340,8 +342,51 @@
         document.getElementById("vsstbid").style.display='none';
       }
       
-      var vsstbv = document.getElementById("vsstbid");
+      var vsstbv=document.getElementById("vsstbid");
           vsstbv.addEventListener('click', vsstbf);
+
+      function vssvssbf() {
+          if (document.getElementById("vssvss000").style.display=='none')
+          {
+              document.getElementById("vssvss0").innerHTML=document.getElementById("всс0").innerHTML;
+              document.getElementById("vssvss1").innerHTML=document.getElementById("всс1").innerHTML;
+              document.getElementById("vssvss2").innerHTML=document.getElementById("всс2").innerHTML;
+              document.getElementById("vssvss3").innerHTML=document.getElementById("всс3").innerHTML;
+              document.getElementById("vssvss4").innerHTML=document.getElementById("всс4").innerHTML;
+              document.getElementById("vssvss5").innerHTML=document.getElementById("всс5").innerHTML;
+              document.getElementById("vssvss7").innerHTML=document.getElementById("всс7").innerHTML;
+              document.getElementById("vssvss8").innerHTML=document.getElementById("всс8").innerHTML;
+            
+              document.getElementById("vssvss000").style.display='block';
+              document.getElementById("vssvss0").style.display='block';
+              document.getElementById("vssvss1").style.display='block';
+              document.getElementById("vssvss2").style.display='block';
+              document.getElementById("vssvss3").style.display='block';
+              document.getElementById("vssvss4").style.display='block';
+              document.getElementById("vssvss5").style.display='block';
+              document.getElementById("vssvss12").style.display='block';
+              if (document.getElementById("всс7").style.display=='block')
+              {
+                  document.getElementById("vssvss7").style.display='block';
+                  document.getElementById("vssvss8").style.display='block';
+              }
+          }
+          else {
+              document.getElementById("vssvss000").style.display='none';
+              document.getElementById("vssvss0").style.display='none';
+              document.getElementById("vssvss1").style.display='none';
+              document.getElementById("vssvss2").style.display='none';
+              document.getElementById("vssvss3").style.display='none';
+              document.getElementById("vssvss4").style.display='none';
+              document.getElementById("vssvss5").style.display='none';
+              document.getElementById("vssvss12").style.display='none';
+              document.getElementById("vssvss7").style.display='none';
+              document.getElementById("vssvss8").style.display='none';   
+          }
+      }
+        
+      var vssvssv=document.getElementById("vssvssb");
+          vssvssv.addEventListener('click', vssvssbf);
       
      </script>   
       
