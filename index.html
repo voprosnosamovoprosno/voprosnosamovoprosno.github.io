@@ -47,13 +47,24 @@
          font-size: x-large;
          }
 
-      .vssdiv {
+      .vsspdiv {
         position: absolute;
         top: 18px;
-        left: 444px;
+        left: 320px;
         font-size: x-large;
        }
 
+      .vssdiv {
+        position: absolute;
+        top: 18px;
+        left: 582px;
+        font-size: x-large;
+       }
+
+      .vsstdiv {
+        display: none;
+       }
+      
       .vssb {
         font-size: x-large;
         color: black;
@@ -168,6 +179,27 @@
     
     </div>
 
+    <div class="vsspdiv">
+
+      <div id="vssvss000" class="vsstdiv">
+         ?вопросно <br>
+         самовопросно <br>
+         самовопросно?
+      </div>
+      <br>
+      <div id="vssvss0" class="vsstdiv">???</div>
+      <div id="vssvss1" class="vsstdiv">????</div>
+      <div id="vssvss2" class="vsstdiv">??????</div>
+      <div id="vssvss3" class="vsstdiv">?????????</div>
+      <div id="vssvss7" class="vsstdiv" class="vsstdiv"></div>
+      <div id="vssvss8" class="vsstdiv"></div>
+      <br>
+      <div id="vssvss4" class="vsstdiv">???</div>
+      <div id="vssvss5" class="vsstdiv">????вопросно</div>
+      <div>самовопросно?</div>
+       
+    </div>
+
     <div class="vssdiv">
 
       <div>
@@ -189,7 +221,7 @@
       <br>
       <div id="всс4">???</div>
       <div id="всс5">????вопросно</div>
-      <div> самовопросно?</div>
+      <div>самовопросно?</div>
        
     </div> 
     
@@ -256,7 +288,7 @@
         document.getElementById("всс3").innerHTML=vss3v;
       }
 
-      var vsspbv=document.querySelector('.vssb');
+      var vsspbv=document.getElementById("vsspb");
           vsspbv.addEventListener('click', vsspbf);
 
       function vsstbf() {
