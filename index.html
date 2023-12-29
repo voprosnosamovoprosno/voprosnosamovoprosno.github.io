@@ -83,6 +83,14 @@
         color: black;
         display: none;
        }
+
+      .vsssfrt {
+        font-size: large;
+        color: black;
+        display: none;
+        border-color: grey;
+        caret-color: black;
+       }
       
    </style>
     
@@ -177,6 +185,8 @@
       <label><input type="radio" id="vssr" name="?5?" value="спец">???спец??сервисно?</label><br>
       <label><input type="radio" id="vssr" name="?5?" value="ново">???ново??номинационно?</label><br>
       <label><input type="radio" id="vssr" name="?5?" value="орфо">???орфо??организованно?</label><br>
+      
+      <button class="vssb" id="vsssfrtb">????????????????</button>
       <br>
       <button class="vssb" id="vssvssb">?? ??</button>
     
@@ -225,7 +235,19 @@
       <div id="всс4">???</div>
       <div id="всс5">????вопросно</div>
       <div>самовопросно?</div>
-       
+      <br>
+      <input type="text" id="vsssfrt0" class="vsssfrt" placeholder="?субъектно?" autocapitalize="off">
+      <input type="text" id="vsssfrt1" class="vsssfrt" placeholder="?антропогенно?" autocapitalize="off">
+      <input type="text" id="vsssfrt2" class="vsssfrt" placeholder="?метафорично?" autocapitalize="off">
+      <input type="text" id="vsssfrt3" class="vsssfrt" placeholder="?органично?" autocapitalize="off">
+      <input type="text" id="vsssfrt4" class="vsssfrt" placeholder="?витально?" autocapitalize="off">
+      <input type="text" id="vsssfrt5" class="vsssfrt" placeholder="?обзорно?" autocapitalize="off">
+      <input type="text" id="vsssfrt6" class="vsssfrt" placeholder="?питательно?" autocapitalize="off">
+      <input type="text" id="vsssfrt7" class="vsssfrt" placeholder="?раритетно?" autocapitalize="off">
+      <input type="text" id="vsssfrt8" class="vsssfrt" placeholder="?оснащённо?" autocapitalize="off">
+      <input type="text" id="vsssfrt9" class="vsssfrt" placeholder="?сервисно?" autocapitalize="off">
+      <input type="text" id="vsssfrt10" class="vsssfrt" placeholder="?номинационно?" autocapitalize="off">
+      <input type="text" id="vsssfrt11" class="vsssfrt" placeholder="?организованно?" autocapitalize="off">
     </div> 
     
     <script>
@@ -421,6 +443,19 @@
         
       var vssvssv=document.getElementById("vssvssb");
           vssvssv.addEventListener('click', vssvssbf);
+      
+      function vsssfrtbf() {
+          for (let vssi=0; 11; vssi++)
+           {
+               if (document.getElementById("vsssfrt"+vssi).style.display=='block')
+                  document.getElementById("vsssfrt"+vssi).style.display=='none';
+               else
+                  document.getElementById("vsssfrt"+vssi).style.display=='block';
+           }
+      }
+      
+      var vsssfrtbv=document.getElementById("vsssfrtb");
+          vsssfrtbv.addEventListener('click', vsssfrtbf);
      
     </script>   
       
