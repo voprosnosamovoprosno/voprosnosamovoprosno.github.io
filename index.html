@@ -464,12 +464,13 @@
 
       function vsssfrtcf() {
           let vsssfrat=document.activeElement;
-              if (vsssfrat.value.first!="?"){
+              if (vsssfrat.value[0]!="?"){
                   vsssfrat.value="?"+vsssfrat.value;
               }
-              if (vsssfrat.value.last!="?"){
+              if (vsssfrat.value[vsssfrat.value.length-1]!="?"){
                   vsssfrat.value=vsssfrat.value+"?";
-              }       
+              } 
+              alert(vsssfrat.value);
       }
       
       var vsssfrtcv=document.querySelector("vsssfrt");
