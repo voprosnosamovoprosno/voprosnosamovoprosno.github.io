@@ -464,9 +464,12 @@
 
       function vsssfrtcf() {
           let vsssfrat=document.activeElement;
-              if (vsssfrat.value.first!="?")
+              if (vsssfrat.value.first!="?"){
                   vsssfrat.value="?"+vsssfrat.value;
-              
+              }
+              if (vsssfrat.value.last!="?"){
+                  vsssfrat.value=vsssfrat.value+"?";
+              }       
       }
       
       var vsssfrtcv=document.querySelector("vsssfrt");
