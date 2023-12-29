@@ -469,11 +469,12 @@
               }
               if (vsssfrat.value[vsssfrat.value.length-1]!="?"){
                   vsssfrat.value=vsssfrat.value+"?";
-              } 
+              }
+              vsssfrat.setSelectionRange(vsssfrat.value.length-1, vsssfrat.value.length-1);
       }
       
       var vsssfrtcv=document.querySelector("vsssfrt");
-          vsssfrtcv=addEventListener('change', vsssfrtcf);
+          vsssfrtcv=addEventListener('input', vsssfrtcf);
         
     </script>   
       
