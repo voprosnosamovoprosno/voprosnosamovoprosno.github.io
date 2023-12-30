@@ -155,7 +155,7 @@
      
    </div>
 
-    <div class="vss4div">
+    <div id="vss4divid" class="vss4div">
 
       <label><input type="radio" id="vssr" name="?4?" value="?системно">?системно?</label><br>
       <label><input type="radio" id="vssr" name="?4?" value="?аутентично">?аутентично?</label><br>
@@ -303,7 +303,7 @@
               {
                  document.getElementsByName("?4?")[vssi].style.fontsize='medium';
               }
-            alert(document.getElementsByName("?4?")[0].style.fontsize);
+            document.getElementsById("vss4divid").style.fontsize='xx-large';
           }));
 
       var vss5 = document.querySelectorAll('input[type=radio][name="?5?"]');
