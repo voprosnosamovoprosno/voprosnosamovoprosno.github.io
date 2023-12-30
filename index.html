@@ -76,7 +76,7 @@
         display: none;
         border-color: grey;
         caret-color: black;
-        width: 281px;
+        width: 318px;
        }
 
       .vsstb {
@@ -91,7 +91,7 @@
         display: none;
         border-color: grey;
         caret-color: black;
-        width: 281px;
+        width: 318px;
        }
       
    </style>
@@ -212,7 +212,20 @@
       <div id="vssvss4" class="vsstdiv">???</div>
       <div id="vssvss5" class="vsstdiv">????вопросно</div>
       <div id="vssvss12" class="vsstdiv">самовопросно?</div>
-       
+      <br>
+      <input type="text" id="vssvsssfrt0" class="vsssfrt" placeholder="?субъектно?" autocapitalize="off">
+      <input type="text" id="vssvsssfrt1" class="vsssfrt" placeholder="?антропогенно?" autocapitalize="off">
+      <input type="text" id="vssvsssfrt2" class="vsssfrt" placeholder="?метафорично?" autocapitalize="off">
+      <input type="text" id="vssvsssfrt3" class="vsssfrt" placeholder="?органично?" autocapitalize="off">
+      <input type="text" id="vssvsssfrt4" class="vsssfrt" placeholder="?витально?" autocapitalize="off">
+      <input type="text" id="vssvsssfrt5" class="vsssfrt" placeholder="?обзорно?" autocapitalize="off">
+      <input type="text" id="vssvsssfrt6" class="vsssfrt" placeholder="?питательно?" autocapitalize="off">
+      <input type="text" id="vssvsssfrt7" class="vsssfrt" placeholder="?раритетно?" autocapitalize="off">
+      <input type="text" id="vssvsssfrt8" class="vsssfrt" placeholder="?оснащённо?" autocapitalize="off">
+      <input type="text" id="vssvsssfrt9" class="vsssfrt" placeholder="?сервисно?" autocapitalize="off">
+      <input type="text" id="vssvsssfrt10" class="vsssfrt" placeholder="?номинационно?" autocapitalize="off">
+      <input type="text" id="vssvsssfrt11" class="vsssfrt" placeholder="?организованно?" autocapitalize="off">
+    
     </div>
 
     <div class="vssdiv">
@@ -250,6 +263,7 @@
       <input type="text" id="vsssfrt9" class="vsssfrt" placeholder="?сервисно?" autocapitalize="off">
       <input type="text" id="vsssfrt10" class="vsssfrt" placeholder="?номинационно?" autocapitalize="off">
       <input type="text" id="vsssfrt11" class="vsssfrt" placeholder="?организованно?" autocapitalize="off">
+    
     </div> 
     
     <script>
@@ -414,7 +428,7 @@
               {
                   document.getElementById("vssvss7").style.display='block';
                   document.getElementById("vssvss8").style.display='block';
-              }
+              }       
               document.getElementById("всс0").innerHTML="???";
               document.getElementById("всс1").innerHTML="????";
               document.getElementById("всс2").innerHTML="??????";
@@ -433,13 +447,19 @@
               document.getElementById("vsstid7").style.display='none';
               document.getElementById("vsstid8").style.display='none';
               document.getElementById("vsstbid").style.display='none';
-
+            
               vssuarbf("?0?");
               vssuarbf("?1?");
               vssuarbf("?2?");
               vssuarbf("?3?");
               vssuarbf("?4?");
               vssuarbf("?5?");
+          }
+          for (let vssi=0; vssi<12; vssi++)
+          {
+              document.getElementById("vssvsssfrt"+vssi).value=document.getElementById("vsssfrt"+vssi).value;
+              document.getElementById("vssvsssfrt"+vssi).style.display=document.getElementById("vsssfrt"+vssi).style.display;
+                      
           }
       }
         
