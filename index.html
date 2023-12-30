@@ -457,9 +457,14 @@
           }
           for (let vssi=0; vssi<12; vssi++)
           {
-              document.getElementById("vssvsssfrt"+vssi).value=document.getElementById("vsssfrt"+vssi).value;
-              document.getElementById("vssvsssfrt"+vssi).style.display=document.getElementById("vsssfrt"+vssi).style.display;
-                      
+              if (document.getElementById("vssvss000").style.display=='block')
+              {
+                  document.getElementById("vssvsssfrt"+vssi).value=document.getElementById("vsssfrt"+vssi).value;
+                  document.getElementById("vssvsssfrt"+vssi).style.display=document.getElementById("vsssfrt"+vssi).style.display;
+              }
+              else {
+                  document.getElementById("vssvsssfrt"+vssi).value='none';
+              }
           }
       }
         
