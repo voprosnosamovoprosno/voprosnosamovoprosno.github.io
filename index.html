@@ -299,7 +299,8 @@
       var vss4 = document.querySelectorAll('input[type=radio][name="?4?"]');
           vss4.forEach(radio => radio.addEventListener('change', function() {
             document.getElementById("всс4").innerHTML=radio.value;
-            document.getElementById("всс0").style.fontsize='xx-large';
+            document.getElementById("vsssfrt0").style.fontsize='xx-large';
+            alert(document.getElementById("vsssfrt0").style.fontsize);
           }));
 
       var vss5 = document.querySelectorAll('input[type=radio][name="?5?"]');
