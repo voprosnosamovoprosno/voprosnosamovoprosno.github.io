@@ -301,6 +301,8 @@
           vss4.forEach(radio => radio.addEventListener('change', function() {
             document.getElementById("всс4").innerHTML=radio.value;
             document.getElementsByName("?4?")[9].style.fontsize='xx-large';
+            alert(document.getElementsByName("?4?")[9].style.fontsize);
+            alert(document.getElementsByName("?4?").style.fontsize);    
           }));
 
       var vss5 = document.querySelectorAll('input[type=radio][name="?5?"]');
