@@ -495,16 +495,19 @@
           if (vsssfrat!=document.getElementById("vsstid7")&&
               vsssfrat!=document.getElementById("vsstid8"))
           {
-              if (vsssfrat.value[0]!="?"){
-                  vsssfrat.value="?"+vsssfrat.value;
+              if (vsssfrat.value!="")
+              {
+                   if (vsssfrat.value[0]!="?")
+                   {
+                        vsssfrat.value="?"+vsssfrat.value;
+                        vsssfrat.setSelectionRange(vsssfrat.value.length-1, vsssfrat.value.length-1);
+                   }
+                   if (vsssfrat.value[vsssfrat.value.length-1]!="?")
+                   {
+                        vsssfrat.value=vsssfrat.value+"?";
+                        vsssfrat.setSelectionRange(vsssfrat.value.length-1, vsssfrat.value.length-1);
+                   }
               }
-              if (vsssfrat.value[vsssfrat.value.length-1]!="?"){
-                  vsssfrat.value=vsssfrat.value+"?";
-              }
-              if (vsssfrat.value.length==1){
-                  vsssfrat.value="";
-              }
-              vsssfrat.setSelectionRange(vsssfrat.value.length-1, vsssfrat.value.length-1);
           }
       }
       
