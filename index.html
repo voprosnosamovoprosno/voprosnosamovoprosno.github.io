@@ -300,13 +300,12 @@
       var vss4 = document.querySelectorAll('input[type=radio][name="?4?"]');
           vss4.forEach(radio => radio.addEventListener('change', function() {
             document.getElementById("всс4").innerHTML=radio.value;
-            alert(document.getElementsByName("?4?").style.fontsize);
             for (let vssi=0; vssi<12; vssi++)
               {
                  document.getElementsByName("?4?")[vssi].style.fontsize='xx-large';
-                 alert(document.getElementsByName("?4?")[vssi].style.fontsize);
+                 alert(vssi);
               }
-            alert(vssi);
+            alert(document.getElementsByName("?4?")[vssi].style.fontsize);
           }));
 
       var vss5 = document.querySelectorAll('input[type=radio][name="?5?"]');
