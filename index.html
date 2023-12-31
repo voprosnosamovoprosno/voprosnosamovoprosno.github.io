@@ -343,7 +343,6 @@
           }));
 
       function vsspbf() {
-        let vss3v = document.getElementById("всс3").innerHTML;
         if (document.getElementById("vsstbid").style.display=='block') 
            {
                document.getElementById("vsstid7").style.display='none';
@@ -351,7 +350,6 @@
                document.getElementById("vsstbid").style.display='none';
                document.getElementById("всс7").style.display='none';
                document.getElementById("всс8").style.display='none';
-               vss3v=vss3v.substring(0, vss3v.length-1)+"?";
             }
         else {
              document.getElementById("vsstid7").style.display='block';
@@ -359,65 +357,24 @@
              document.getElementById("vsstbid").style.display='block';
              document.getElementById("всс7").style.display='none';
              document.getElementById("всс8").style.display='none';
-             vss3v=vss3v.substring(0, vss3v.length-1)+" ";
              }
-        document.getElementById("всс3").innerHTML=vss3v;
       }
 
       var vsspbv=document.getElementById("vsspb");
           vsspbv.addEventListener('click', vsspbf);
 
       function vsstbf() {
-        let vss3v=document.getElementById("всс3").innerHTML;
-        let vss7s=document.getElementById("vsstid7").value;
-        let vss8s=document.getElementById("vsstid8").value; 
-        if(vss8s.length==0)
-        {
-               if(vss7s.length==0)
-               {
-                   document.getElementById("всс7").style.display='none';
-                   document.getElementById("всс8").style.display='none';
-                   vss3v=vss3v.substring(0, vss3v.length-1)+"?";
-                   document.getElementById("всс3").innerHTML=vss3v;
-               }
-               else {
-                   document.getElementById("всс7").style.display='block';
-                   document.getElementById("всс8").style.display='none';
-                   if(vss7s[vss7s.length-1]!="?")
-                   {
-                       vss7s=vss7s+"?";
-                   }
-               }
-        }
-        else {
-               document.getElementById("всс8").style.display='block';
-               if(vss7s.length>0)
-               {
-                    if(vss7s[vss7s.length-1]=="?")
-                    {
-                         vss7s=vss7s.substring(0, vss7s.length-1);
-                    }
-                    document.getElementById("всс7").style.display='block';
-               }
-               else {
-                    document.getElementById("всс7").style.display='none';
-               }
-               if(vss8s[vss8s.length-1]!="?")
-               {
-                    vss8s=vss8s+"?";
-               }
-          }
-        document.getElementById("всс7").innerHTML=vss7s;
-        document.getElementById("всс8").innerHTML=vss8s;
-        document.getElementById("vsstid7").value=vss7s;
-        document.getElementById("vsstid8").value=vss8s;
-        document.getElementById("vsstid7").style.display='none';
-        document.getElementById("vsstid8").style.display='none';
-        document.getElementById("vsstbid").style.display='none';
+        
       }
       
       var vsstbv=document.getElementById("vsstbid");
-          vsstbv.addEventListener('click', vsstbf);
+          vsstbv.addEventListener('click', vsstbf() {
+               document.getElementById("всс7").innerHTML=document.getElementById("vsstid7").value;
+               document.getElementById("всс8").innerHTML=document.getElementById("vsstid8").value;
+               document.getElementById("vsstid7").style.display='none';
+               document.getElementById("vsstid8").style.display='none';
+               document.getElementById("vsstbid").style.display='none';
+          });
 
       function vssuarbf(vssrbn){
           let vssrbl=document.getElementsByName(vssrbn);
@@ -510,10 +467,7 @@
           vssvssv.addEventListener('click', vssvssbf);
       
       function vsstif() {
-          let vsstil=document.activeElement;
-          if (vsstil!=document.getElementById("vsstid7")&&
-              vsstil!=document.getElementById("vsstid8"))
-          {
+              let vsstil=document.activeElement;
               if (vsstil.value!="")
               {
                    if (vsstil.value[0]!="?")
@@ -527,7 +481,6 @@
                         vsstil.setSelectionRange(vsstil.value.length-1, vsstil.value.length-1);
                    }
               }
-          }
       }
       
       var vssti=document.querySelector('vsssfrt');
