@@ -371,9 +371,10 @@
           vsstbv.addEventListener('click', function() {
                let vss8tl=document.getElementById("vsstid8").value;
                let vss7tl=document.getElementById("vsstid7").value;
-               let vss3tl=document.getElementById("vsstid3").innerHTML;
+               let vss3tl=document.getElementById("всс3").innerHTML;
                if(vss8tl.value!="")
                {
+                   alert(vss8tl);     
                    vss8tl.value=vss8tl.value.substring(1, vss8tl.value.length);
                }
                document.getElementById("всс8").innerHTML=vss8tl.value;
