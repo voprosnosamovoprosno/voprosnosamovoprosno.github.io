@@ -339,8 +339,9 @@
             }
           }));
 
-      function vsspbf() {
-        if (document.getElementById("vsstbid").style.display=='block') 
+      var vsspbv=document.getElementById("vsspb");
+          vsspbv.addEventListener('click', function() {
+            if (document.getElementById("vsstbid").style.display=='block') 
            {
                document.getElementById("vsstid7").style.display='none';
                document.getElementById("vsstid8").style.display='none';
@@ -354,16 +355,15 @@
              document.getElementById("vsstbid").style.display='block';
              document.getElementById("всс7").style.display='none';
              document.getElementById("всс8").style.display='none';
+             let vss3tl=document.getElementById("всс3").innerHTML;
+             if (vss3tl[vss3tl.length-1]!="?")
+                   {
+                       vss3tl=vss3tl+"?";
+                       document.getElementById("всс3").innerHTML=vss3tl;
+                   }
              }
-      }
+          });
 
-      var vsspbv=document.getElementById("vsspb");
-          vsspbv.addEventListener('click', vsspbf);
-
-      function vsstbf() {
-        
-      }
-      
       var vsstbv=document.getElementById("vsstbid");
           vsstbv.addEventListener('click', function() {
                let vss8tl=document.getElementById("vsstid8").value;
