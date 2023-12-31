@@ -215,8 +215,6 @@
       <label><input type="checkbox" id="vssc" name="?6?" value="9">?сервисно?</label><br>
       <label><input type="checkbox" id="vssc" name="?6?" value="10">?номинационно?</label><br>
       <label><input type="checkbox" id="vssc" name="?6?" value="11">?организованно?</label><br>
-      
-      <button class="vssb" id="vsssfrtb">????????????????</button>
     
     </div>
 
@@ -511,24 +509,6 @@
       var vssvssv=document.getElementById("vssvssb");
           vssvssv.addEventListener('click', vssvssbf);
       
-      function vsssfrtbf() {
-          let vsssfrti;
-          for (let vssi=0; vssi<12; vssi++)
-           {
-               vsssfrti="vsssfrt"+vssi;
-               if (document.getElementById(vsssfrti).style.display=='block')
-               {
-                  document.getElementById(vsssfrti).style.display='none';
-               }
-               else {
-                  document.getElementById(vsssfrti).style.display='block';
-               }
-           }
-      }
-      
-      var vsssfrtbv=document.getElementById("vsssfrtb");
-          vsssfrtbv.addEventListener('click', vsssfrtbf);
-
       function vsssfrtcf() {
           let vsssfrat=document.activeElement;
           if (vsssfrat!=document.getElementById("vsstid7")&&
