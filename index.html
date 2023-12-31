@@ -392,13 +392,13 @@
                else {
                    vss7tl="";
                }
-               if(vss8tl.length>0 vss7tl.length>0)
+               if(vss8tl.length>0 || vss7tl.length>0)
                {
-                   vss3tl=vss7tl.substring(0, vss7tl.length-1);
+                   vss3tl=vss3tl.substring(0, vss3tl.length-1);
                }     
                document.getElementById("всс8").innerHTML=vss8tl;
                document.getElementById("всс7").innerHTML=vss7tl;
-               document.getElementById("всс3").innerHTML=vss4tl;
+               document.getElementById("всс3").innerHTML=vss3tl;
                document.getElementById("всс7").style.display='block';
                document.getElementById("всс8").style.display='block';
                document.getElementById("vsstid7").style.display='none';
