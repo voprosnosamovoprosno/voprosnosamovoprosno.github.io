@@ -372,13 +372,33 @@
                let vss8tl=document.getElementById("vsstid8").value;
                let vss7tl=document.getElementById("vsstid7").value;
                let vss3tl=document.getElementById("всс3").innerHTML;
-               if(vss8tl!="")
-               {
-                   alert(vss8tl.length);     
+               if(vss8tl.length>2)
+               { 
                    vss8tl=vss8tl.substring(1, vss8tl.length);
                }
+               else {
+                   vss8tl="";
+               }
+               if(vss7tl.length>2)
+               {
+                   if(vss8tl.length>0)
+                   {
+                       vss7tl=vss7tl.substring(1, vss7tl.length-1);
+                   }
+                   else {
+                       vss7tl=vss7tl.substring(1, vss7tl.length);
+                   }
+               }
+               else {
+                   vss7tl="";
+               }
+               if(vss8tl.length>0 vss7tl.length>0)
+               {
+                   vss3tl=vss7tl.substring(0, vss7tl.length-1);
+               }     
                document.getElementById("всс8").innerHTML=vss8tl;
-               document.getElementById("всс7").innerHTML=document.getElementById("vsstid7").value;
+               document.getElementById("всс7").innerHTML=vss7tl;
+               document.getElementById("всс3").innerHTML=vss4tl;
                document.getElementById("всс7").style.display='block';
                document.getElementById("всс8").style.display='block';
                document.getElementById("vsstid7").style.display='none';
