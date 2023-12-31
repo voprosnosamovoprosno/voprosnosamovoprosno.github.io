@@ -203,18 +203,18 @@
 
     <div class="vss6div">
 
-      <label><input type="checkbox" id="vssc" name="?6?" value="свое">?субъектно?</label><br>
-      <label><input type="checkbox" id="vssc" name="?6?" value="архи">?антропогенно?</label><br>
-      <label><input type="checkbox" id="vssc" name="?6?" value="мета">?метафорично?</label><br>
-      <label><input type="checkbox" id="vssc" name="?6?" value="онто">?органично?</label><br>
-      <label><input type="checkbox" id="vssc" name="?6?" value="вехо">?витально?</label><br>
-      <label><input type="checkbox" id="vssc" name="?6?" value="орто">?обзорно?</label><br>
-      <label><input type="checkbox" id="vssc" name="?6?" value="пред">?питательно?</label><br>
-      <label><input type="checkbox" id="vssc" name="?6?" value="рост">?раритетно?</label><br>
-      <label><input type="checkbox" id="vssc" name="?6?" value="окто">?оснащённо?</label><br>
-      <label><input type="checkbox" id="vssc" name="?6?" value="спец">?сервисно?</label><br>
-      <label><input type="checkbox" id="vssc" name="?6?" value="ново">?номинационно?</label><br>
-      <label><input type="checkbox" id="vssc" name="?6?" value="орфо">?организованно?</label><br>
+      <label><input type="checkbox" id="vssc" name="?6?" value="0">?субъектно?</label><br>
+      <label><input type="checkbox" id="vssc" name="?6?" value="1">?антропогенно?</label><br>
+      <label><input type="checkbox" id="vssc" name="?6?" value="2">?метафорично?</label><br>
+      <label><input type="checkbox" id="vssc" name="?6?" value="3">?органично?</label><br>
+      <label><input type="checkbox" id="vssc" name="?6?" value="4">?витально?</label><br>
+      <label><input type="checkbox" id="vssc" name="?6?" value="5">?обзорно?</label><br>
+      <label><input type="checkbox" id="vssc" name="?6?" value="6">?питательно?</label><br>
+      <label><input type="checkbox" id="vssc" name="?6?" value="7">?раритетно?</label><br>
+      <label><input type="checkbox" id="vssc" name="?6?" value="8">?оснащённо?</label><br>
+      <label><input type="checkbox" id="vssc" name="?6?" value="9">?сервисно?</label><br>
+      <label><input type="checkbox" id="vssc" name="?6?" value="10">?номинационно?</label><br>
+      <label><input type="checkbox" id="vssc" name="?6?" value="11">?организованно?</label><br>
       
       <button class="vssb" id="vsssfrtb">????????????????</button>
     
@@ -335,8 +335,7 @@
       
       var vss6 = document.querySelectorAll('input[type=checkbox][name="?6?"]');
           vss6.forEach(checkbox => checkbox.addEventListener('change', function() {
-            document.getElementById("vsssfrt0").value=checkbox.value;
-            document.getElementById("vsssfrt0").style.display='block';
+            document.getElementById("vsssfrt"+checkbox.value).style.display='block';
           }));
 
       function vsspbf() {
