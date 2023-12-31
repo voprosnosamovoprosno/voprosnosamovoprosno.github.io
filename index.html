@@ -335,13 +335,15 @@
       
       var vss6 = document.querySelectorAll('input[type=checkbox][name="?6?"]');
           vss6.forEach(checkbox => checkbox.addEventListener('change', function() {
-            if (checkbox[checkbox.value].checked=='true')
+            alert(checkbox[checkbox.value].checked);
+            if (checkbox[checkbox.value].checked==true)
             {
                  document.getElementById("vsssfrt"+checkbox.value).style.display='block';
             }
             else {
                  document.getElementById("vsssfrt"+checkbox.value).style.display='none';
             }
+            alert(vss6[vss6.value].checked);
           }));
 
       function vsspbf() {
