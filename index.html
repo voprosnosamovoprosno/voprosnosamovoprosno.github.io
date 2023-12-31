@@ -332,6 +332,12 @@
           vss5.forEach(radio => radio.addEventListener('change', function() {
             document.getElementById("всс5").innerHTML=radio.value+"вопросно"
           }));
+      
+      var vss6 = document.querySelectorAll('input[type=checkbox][name="?6?"]');
+          vss6.forEach(checkbox => checkbox.addEventListener('change', function() {
+            document.getElementById("vsssfrt0").value=checkbox.value;
+            document.getElementById("vsssfrt0").style.display='block';
+          }));
 
       function vsspbf() {
         let vss3v = document.getElementById("всс3").innerHTML;
