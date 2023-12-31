@@ -310,13 +310,10 @@
       var vss3 = document.querySelectorAll('input[type=radio][name="?3?"]');
           vss3.forEach(radio => radio.addEventListener('change', function() {
             let vss3v=radio.value;
-            if (document.getElementById("всс8").style.display == 'block')
+            if (document.getElementById("всс8").style.display == 'block'
+               || document.getElementById("всс7").style.display == 'block')
             { 
-                vss3v=vss3v.substring(0, vss3v.length-1)+" ";
-            }
-            if (document.getElementById("vsstbid").style.display == 'block')
-            {
-                vss3v=vss3v.substring(0, vss3v.length-1)+" ";
+                vss3v=vss3v.substring(0, vss3v.length-1);
             }
             document.getElementById("всс3").innerHTML=vss3v;
           }));
