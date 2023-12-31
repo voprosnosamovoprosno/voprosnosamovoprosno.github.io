@@ -509,29 +509,59 @@
       var vssvssv=document.getElementById("vssvssb");
           vssvssv.addEventListener('click', vssvssbf);
       
-      function vsssfrtcf() {
-          let vsssfrat=document.activeElement;
-          if (vsssfrat!=document.getElementById("vsstid7")&&
-              vsssfrat!=document.getElementById("vsstid8"))
+      function vsstif() {
+          let vsstil=document.activeElement;
+          if (vsstil!=document.getElementById("vsstid7")&&
+              vsstil!=document.getElementById("vsstid8"))
           {
-              if (vsssfrat.value!="")
+              if (vsstil.value!="")
               {
-                   if (vsssfrat.value[0]!="?")
+                   if (vsstil.value[0]!="?")
                    {
-                        vsssfrat.value="?"+vsssfrat.value;
-                        vsssfrat.setSelectionRange(vsssfrat.value.length-1, vsssfrat.value.length-1);
+                        vsstil.value="?"+vsstil.value;
+                        vsstil.setSelectionRange(vsstil.value.length-1, vsstil.value.length-1);
                    }
-                   if (vsssfrat.value[vsssfrat.value.length-1]!="?")
+                   if (vsstil.value[vsstil.value.length-1]!="?")
                    {
-                        vsssfrat.value=vsssfrat.value+"?";
-                        vsssfrat.setSelectionRange(vsssfrat.value.length-1, vsssfrat.value.length-1);
+                        vsstil.value=vsstil.value+"?";
+                        vsstil.setSelectionRange(vsstil.value.length-1, vsstil.value.length-1);
                    }
               }
           }
+          if (vsstil==document.getElementById("vsstid7"))
+          {
+               if (document.getElementById("vsstid8").value=="")
+               {
+                    if (vsstil.value[vsstil.value.length-1]!="?")
+                   {
+                        vsstil.value=vsstil.value+"?";
+                        vsstil.setSelectionRange(vsstil.value.length-1, vsstil.value.length-1);
+                   }
+               }
+               else {
+                    if (vsstil.value[vsstil.value.length-1]=="?")
+                    {
+                        vsstil.value=vsstil.value.substring(0, vsstil.value.length-1);
+                        vsstil.setSelectionRange(vsstil.value.length-1, vsstil.value.length-1);
+                    }
+               }
+           }
+           if (vsstil==document.getElementById("vsstid8"))
+           {
+               if(document.getElementById("vsstid7").value[document.getElementById("vsstid7").value.length-1]=="?")
+               {
+                   document.getElementById("vsstid7").value[document.getElementById("vsstid7").value.length-1]="";
+                   if (vsstil.value[vsstil.value.length-1]!="?")
+                   {
+                        vsstil.value=vsstil.value+"?";
+                        vsstil.setSelectionRange(vsstil.value.length-1, vsstil.value.length-1);
+                   }
+               }
+           }
       }
       
-      var vsssfrtcv=document.querySelector('vsssfrt');
-          vsssfrtcv=addEventListener('input', vsssfrtcf);
+      var vssti=document.querySelector('vsssfrt');
+          vssti=addEventListener('input', vsstif);
     
    </script>   
       
