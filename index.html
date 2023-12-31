@@ -392,7 +392,13 @@
                if(vss8tl.length>0 || vss7tl.length>0)
                {
                    vss3tl=vss3tl.substring(0, vss3tl.length-1);
-               }     
+               }
+               else {
+                   if (vss3tl[vss3tl.length-1]!="?")
+                   {
+                       vss3tl=vss3tl+"?";
+                   }
+               }
                document.getElementById("всс8").innerHTML=vss8tl;
                document.getElementById("всс7").innerHTML=vss7tl;
                document.getElementById("всс3").innerHTML=vss3tl;
