@@ -335,9 +335,8 @@
       
       var vss6 = document.querySelectorAll('input[type=checkbox][name="?6?"]');
           vss6.forEach(checkbox => checkbox.addEventListener('change', function() {
-            alert(checkbox.value);
-            alert(checkbox[checkbox.value].checked);
-            if (checkbox[checkbox.value].checked==true)
+            alert(checkbox.checked);
+            if (checkbox.checked==true)
             {
                  document.getElementById("vsssfrt"+checkbox.value).style.display='block';
             }
