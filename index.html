@@ -335,7 +335,13 @@
       
       var vss6 = document.querySelectorAll('input[type=checkbox][name="?6?"]');
           vss6.forEach(checkbox => checkbox.addEventListener('change', function() {
-            document.getElementById("vsssfrt"+checkbox.value).style.display='block';
+            if (checkbox[checkbox.value].checked=='true')
+            {
+                 document.getElementById("vsssfrt"+checkbox.value).style.display='block';
+            }
+            else {
+                 document.getElementById("vsssfrt"+checkbox.value).style.display='none';
+            }
           }));
 
       function vsspbf() {
