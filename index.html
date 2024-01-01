@@ -206,6 +206,7 @@
       <label><input type="radio" id="vssr" name="?5?" value="орфо">???орфо?</label><br>
       <br>
       <select class="vsscsc" id="vsscsid" size="12">
+          <option value="??">??</option>
           <option value="?словесно?">?словесно?</option>
           <option disabled value="?аудиовопросительно?">?аудиовопросительно?</option>
           <option disabled value="?мелодично?">?мелодично?</option>
@@ -451,7 +452,7 @@
       var vssti=document.querySelector('vsssfrt');
           vssti=addEventListener('input', vsstif);
 
-      function vsscs0f()
+      function vsscs1f()
       {
            document.getElementById("vsstid7").style.display='block';
            document.getElementById("vsstid8").style.display='block';
@@ -467,11 +468,17 @@
       }
       
       document.getElementById("vsscsid").addEventListener('input', function(){
-          if (this.selectedIndex==0)
+          if (this.selectedIndex==1)
           {
-              vsscs0f()
+              vsscs1f()
           }
+          document.getElementById("vssasid").value="";
       });
+
+      function vssas0f()
+      {
+
+      }
 
       function vssas1f()
       {
@@ -554,13 +561,27 @@
       }
       
       document.getElementById("vssasid").addEventListener('input', function(){
-          if(this.selectedIndex==1)
+          if(this.value=="?аддитивно?")
           {
-              vssas1f();
+              if(document.getElementById("vsscsid").value=="??")
+              {
+                  vssas0f();
+              }
+              if(document.getElementById("vsscsid").value=="?словесно?")
+              {
+                  vssas1f();
+              }
           }
-          if(this.selectedIndex==11)
+          if(this.selectedIndex=="?отменённо?")
           {
-              vssas1f();
+              if(document.getElementById("vsscsid").value=="??")
+              {
+                  
+              }
+              if(document.getElementById("vsscsid").value=="?словесно?")
+              {
+                  vssas1f();
+              }
           }
       });
    
