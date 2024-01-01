@@ -225,7 +225,7 @@
           <option value="?о??????но?">?о??????но?</option>
       </select>
       <br>
-      <select class="vssasc" id="vssasnid" size="12">
+      <select class="vssasc" id="vssasid" size="12">
           <option value="?созданно?">?созданно?</option>
           <option disabled value="?а??????но?">?а??????но?</option>
           <option disabled value="?м??????но?">?м??????но?</option>
@@ -563,7 +563,11 @@
       
       var vssti=document.querySelector('vsssfrt');
           vssti=addEventListener('input', vsstif);
-    
+
+      document.getElementById("vsscscid").addEventListener('change', function() {
+        alert(document.getElementById("vsscscid").selected.value);
+      });
+      
    </script>   
       
   </body>
