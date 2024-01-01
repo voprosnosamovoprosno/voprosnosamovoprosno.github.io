@@ -76,11 +76,6 @@
         display: none;
        }
       
-      .vssb {
-        font-size: x-large;       
-        color: black;
-       }
-      
       .vsst {
         font-size: large;
         color: black;
@@ -239,8 +234,6 @@
           <option disabled value="?н??????но?">?н??????но?</option>
           <option disabled value="?отменённо?">?отменённо?</option>
       </select>
-    
-      <button class="vssb" id="vssvssb">?? ??</button>
      
     </div>
 
@@ -438,7 +431,50 @@
                 }
       }
       
-      function vssvssbf() {
+      function vsstif() {
+              let vsstil=document.activeElement;
+              if (vsstil.value!="")
+              {
+                   if (vsstil.value[0]!="?")
+                   {
+                        vsstil.value="?"+vsstil.value;
+                        vsstil.setSelectionRange(vsstil.value.length-1, vsstil.value.length-1);
+                   }
+                   if (vsstil.value[vsstil.value.length-1]!="?")
+                   {
+                        vsstil.value=vsstil.value+"?";
+                        vsstil.setSelectionRange(vsstil.value.length-1, vsstil.value.length-1);
+                   }
+              }
+      }
+      
+      var vssti=document.querySelector('vsssfrt');
+          vssti=addEventListener('input', vsstif);
+
+      function vsscs0f()
+      {
+           document.getElementById("vsstid7").style.display='block';
+           document.getElementById("vsstid8").style.display='block';
+           document.getElementById("vsstbid").style.display='block';
+           document.getElementById("всс7").style.display='none';
+           document.getElementById("всс8").style.display='none';
+           let vss3tl=document.getElementById("всс3").innerHTML;
+           if (vss3tl[vss3tl.length-1]!="?")
+           {
+                    vss3tl=vss3tl+"?";
+                    document.getElementById("всс3").innerHTML=vss3tl;
+           }
+      }
+      
+      document.getElementById("vsscsid").addEventListener('input', function(){
+          if (this.selectedIndex==0)
+          {
+              vsscs0f()
+          }
+      });
+
+      function vssas1f()
+      {
           if (document.getElementById("vssvss000").style.display=='block')
           {
               document.getElementById("vssvss000").style.display='none';
@@ -515,57 +551,6 @@
                   document.getElementById("vssvsssfrt"+vssi).style.display='none';
               }
           }
-      }
-        
-      var vssvssv=document.getElementById("vssvssb");
-          vssvssv.addEventListener('click', vssvssbf);
-      
-      function vsstif() {
-              let vsstil=document.activeElement;
-              if (vsstil.value!="")
-              {
-                   if (vsstil.value[0]!="?")
-                   {
-                        vsstil.value="?"+vsstil.value;
-                        vsstil.setSelectionRange(vsstil.value.length-1, vsstil.value.length-1);
-                   }
-                   if (vsstil.value[vsstil.value.length-1]!="?")
-                   {
-                        vsstil.value=vsstil.value+"?";
-                        vsstil.setSelectionRange(vsstil.value.length-1, vsstil.value.length-1);
-                   }
-              }
-      }
-      
-      var vssti=document.querySelector('vsssfrt');
-          vssti=addEventListener('input', vsstif);
-
-      function vsscs0f()
-      {
-           document.getElementById("vsstid7").style.display='block';
-           document.getElementById("vsstid8").style.display='block';
-           document.getElementById("vsstbid").style.display='block';
-           document.getElementById("всс7").style.display='none';
-           document.getElementById("всс8").style.display='none';
-           let vss3tl=document.getElementById("всс3").innerHTML;
-           if (vss3tl[vss3tl.length-1]!="?")
-           {
-                    vss3tl=vss3tl+"?";
-                    document.getElementById("всс3").innerHTML=vss3tl;
-           }
-      }
-      
-      document.getElementById("vsscsid").addEventListener('input', function(){
-          if (this.selectedIndex==0)
-          {
-              vsscs0f()
-          }
-      });
-
-
-      function vssas1f()
-      {
-          vssvssbf();
       }
       
       document.getElementById("vssasid").addEventListener('input', function(){
