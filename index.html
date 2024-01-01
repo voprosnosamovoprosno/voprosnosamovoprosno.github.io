@@ -85,12 +85,6 @@
         width: 286px;
        }
 
-      .vsstb {
-        display: none;
-        font-size: x-large;       
-        color: black;
-       }
-
       .vsssfrt {
         font-size: large;
         color: black;
@@ -376,53 +370,6 @@
             }
           }));
 
-      var vsstbv=document.getElementById("vsstbid");
-          vsstbv.addEventListener('click', function() {
-               let vss8tl=document.getElementById("vsstid8").value;
-               let vss7tl=document.getElementById("vsstid7").value;
-               let vss3tl=document.getElementById("всс3").innerHTML;
-               document.getElementById("всс7").style.display='none';
-               document.getElementById("всс8").style.display='none';
-               if(vss8tl.length>2)
-               { 
-                   vss8tl=vss8tl.substring(1, vss8tl.length);
-                   document.getElementById("всс8").style.display='block';
-               }
-               else {
-                   vss8tl="";
-               }
-               if(vss7tl.length>2)
-               {
-                   if(vss8tl.length>2)
-                   {
-                       vss7tl=vss7tl.substring(1, vss7tl.length-1);
-                   }
-                   else {
-                       vss7tl=vss7tl.substring(1, vss7tl.length);
-                   }
-                   document.getElementById("всс7").style.display='block';
-               }
-               else {
-                   vss7tl="";
-               }
-               if(vss8tl.length>2 || vss7tl.length>2)
-               {
-                   vss3tl=vss3tl.substring(0, vss3tl.length-1);
-               }
-               else {
-                   if (vss3tl[vss3tl.length-1]!="?")
-                   {
-                       vss3tl=vss3tl+"?";
-                   }
-               }
-               document.getElementById("всс8").innerHTML=vss8tl;
-               document.getElementById("всс7").innerHTML=vss7tl;
-               document.getElementById("всс3").innerHTML=vss3tl;
-               document.getElementById("vsstid7").style.display='none';
-               document.getElementById("vsstid8").style.display='none';
-               document.getElementById("vsstbid").style.display='none';
-          });
-
       function vssuarbf(vssrbn){
           let vssrbl=document.getElementsByName(vssrbn);
               for(let vssi=0; vssi<vssrbl.length; vssi++)
@@ -523,7 +470,7 @@
 
       function vssas1f()
       {
-          if (document.getElementById("vssvss000").style.display=='block')
+          if (document.getElementById("vssasid").value=="отменённо")
           {
               document.getElementById("vssvss000").style.display='none';
               document.getElementById("vssvss0").style.display='none';
