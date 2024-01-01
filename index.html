@@ -210,7 +210,7 @@
       <label><input type="radio" id="vssr" name="?5?" value="ново">???ново?</label><br>
       <label><input type="radio" id="vssr" name="?5?" value="орфо">???орфо?</label><br>
       
-      <select class="vsscsc" id="vsscscid" size="12">
+      <select class="vsscsc" id="vsscsid" size="12">
           <option value="?словесно?">?словесно?</option>
           <option disabled value="?аудиовопросительно?">?аудиовопросительно?</option>
           <option disabled value="?мелодично?">?мелодично?</option>
@@ -384,7 +384,7 @@
 
       var vsspbv=document.getElementById("vsspb");
           vsspbv.addEventListener('click', function() {
-            if (document.getElementById("vsstbid").style.display=='block') 
+           if (document.getElementById("vsstbid").style.display=='block') 
            {
                document.getElementById("vsstid7").style.display='none';
                document.getElementById("vsstid8").style.display='none';
@@ -392,7 +392,7 @@
                document.getElementById("всс7").style.display='none';
                document.getElementById("всс8").style.display='none';
             }
-        else {
+            else {
              document.getElementById("vsstid7").style.display='block';
              document.getElementById("vsstid8").style.display='block';
              document.getElementById("vsstbid").style.display='block';
@@ -564,9 +564,36 @@
       var vssti=document.querySelector('vsssfrt');
           vssti=addEventListener('input', vsstif);
 
-      document.getElementById("vsscscid").addEventListener('change', function() {
-          alert(this.options[this.selectedIndex].value);
-          alert(this.value);
+      function vsscs0f()
+      {
+          if (document.getElementById("vsstbid").style.display=='block') 
+          {
+               document.getElementById("vsstid7").style.display='none';
+               document.getElementById("vsstid8").style.display='none';
+               document.getElementById("vsstbid").style.display='none';
+               document.getElementById("всс7").style.display='none';
+               document.getElementById("всс8").style.display='none';
+          }
+          else {
+               document.getElementById("vsstid7").style.display='block';
+               document.getElementById("vsstid8").style.display='block';
+               document.getElementById("vsstbid").style.display='block';
+               document.getElementById("всс7").style.display='none';
+               document.getElementById("всс8").style.display='none';
+               let vss3tl=document.getElementById("всс3").innerHTML;
+               if (vss3tl[vss3tl.length-1]!="?")
+               {
+                    vss3tl=vss3tl+"?";
+                    document.getElementById("всс3").innerHTML=vss3tl;
+               }
+          }
+      }
+      
+      document.getElementById("vsscsid").addEventListener('change', function(){
+          if (this.value==0)
+          {
+              vsscs0f()
+          }
       });
       
    </script>   
