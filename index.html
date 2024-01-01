@@ -171,7 +171,7 @@
     <label><input type="radio" id="vssr" name="?3?" value="надёжно?">???????надёжно?</label><br>
     <label><input type="radio" id="vssr" name="?3?" value="обиходно?">???????обиходно?</label><br>
 
-    <button class="vssb" id="vsspb">????????????????</button>      
+    <div>????????????????</div>      
     <br><br><br>
     <div>?email??voprosnosamovoprosno@gmail.com?</div>
     <div>?advcash??voprosnosamovoprosno@gmail.com?</div>
@@ -382,31 +382,6 @@
             }
           }));
 
-      var vsspbv=document.getElementById("vsspb");
-          vsspbv.addEventListener('click', function() {
-           if (document.getElementById("vsstbid").style.display=='block') 
-           {
-               document.getElementById("vsstid7").style.display='none';
-               document.getElementById("vsstid8").style.display='none';
-               document.getElementById("vsstbid").style.display='none';
-               document.getElementById("всс7").style.display='none';
-               document.getElementById("всс8").style.display='none';
-            }
-            else {
-             document.getElementById("vsstid7").style.display='block';
-             document.getElementById("vsstid8").style.display='block';
-             document.getElementById("vsstbid").style.display='block';
-             document.getElementById("всс7").style.display='none';
-             document.getElementById("всс8").style.display='none';
-             let vss3tl=document.getElementById("всс3").innerHTML;
-             if (vss3tl[vss3tl.length-1]!="?")
-                   {
-                       vss3tl=vss3tl+"?";
-                       document.getElementById("всс3").innerHTML=vss3tl;
-                   }
-             }
-          });
-
       var vsstbv=document.getElementById("vsstbid");
           vsstbv.addEventListener('click', function() {
                let vss8tl=document.getElementById("vsstid8").value;
@@ -566,27 +541,17 @@
 
       function vsscs0f()
       {
-          if (document.getElementById("vsstbid").style.display=='block') 
-          {
-               document.getElementById("vsstid7").style.display='none';
-               document.getElementById("vsstid8").style.display='none';
-               document.getElementById("vsstbid").style.display='none';
-               document.getElementById("всс7").style.display='none';
-               document.getElementById("всс8").style.display='none';
-          }
-          else {
-               document.getElementById("vsstid7").style.display='block';
-               document.getElementById("vsstid8").style.display='block';
-               document.getElementById("vsstbid").style.display='block';
-               document.getElementById("всс7").style.display='none';
-               document.getElementById("всс8").style.display='none';
-               let vss3tl=document.getElementById("всс3").innerHTML;
-               if (vss3tl[vss3tl.length-1]!="?")
-               {
+           document.getElementById("vsstid7").style.display='block';
+           document.getElementById("vsstid8").style.display='block';
+           document.getElementById("vsstbid").style.display='block';
+           document.getElementById("всс7").style.display='none';
+           document.getElementById("всс8").style.display='none';
+           let vss3tl=document.getElementById("всс3").innerHTML;
+           if (vss3tl[vss3tl.length-1]!="?")
+           {
                     vss3tl=vss3tl+"?";
                     document.getElementById("всс3").innerHTML=vss3tl;
-               }
-          }
+           }
       }
       
       document.getElementById("vsscsid").addEventListener('change', function(){
@@ -594,7 +559,6 @@
           {
               vsscs0f()
           }
-          alert(this.selectedIndex);
       });
       
    </script>   
