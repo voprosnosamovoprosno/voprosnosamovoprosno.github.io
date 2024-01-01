@@ -416,12 +416,12 @@
       document.getElementById("vsscsid").addEventListener('input', function(){
           if (this.value=="?словесно?")
           {
-              vsscs1f()
+              vsscs1f();
           }
           document.getElementById("vssasid").value="";
       });
 
-      function vssas0f()
+      function vssas1f()
       {
                let vss8tl=document.getElementById("vsstid8").value;
                let vss7tl=document.getElementById("vsstid7").value;
@@ -468,7 +468,7 @@
                document.getElementById("vsstbid").style.display='none';
       }
 
-      function vssas1f()
+      function vssas0f()
       {
           if (document.getElementById("vssasid").value=="?отменённо?")
           {
@@ -553,24 +553,24 @@
           {
               if(document.getElementById("vsscsid").value=="??")
               {
-                  vssas1f();
+                  vssas0f();
               }
               if(document.getElementById("vsscsid").value=="?словесно?")
               {
-                  vssas0f();
+                  vssas1f();
               }
           }
           if(this.value=="?отменённо?")
           {
               if(document.getElementById("vsscsid").value=="??")
               {
-                  vssas1f();
+                  vssas0f();
               }
               if(document.getElementById("vsscsid").value=="?словесно?")
               {
                   document.getElementById("vsstid8").value="";
                   document.getElementById("vsstid7").value="";
-                  vssas0f();
+                  vssas1f();
               }
           }
       });
