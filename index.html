@@ -226,8 +226,8 @@
       </select>
       <br>
       <select class="vssasc" id="vssasid" size="12">
-          <option value="?созданно?">?созданно?</option>
-          <option disabled value="?а??????но?">?а??????но?</option>
+          <option disabled value="?созданно?">?созданно?</option>
+          <option value="?аддитивно?">?аддитивно?</option>
           <option disabled value="?м??????но?">?м??????но?</option>
           <option disabled value="?о??????но?">?о??????но?</option>
           <option disabled value="?в??????но?">?в??????но?</option>
@@ -237,7 +237,7 @@
           <option disabled value="?о??????но?">?о??????но?</option>
           <option disabled value="?с??????но?">?с??????но?</option>
           <option disabled value="?н??????но?">?н??????но?</option>
-          <option value="?отменённо?">?отменённо?</option>
+          <option disabled value="?отменённо?">?отменённо?</option>
       </select>
     
       <button class="vssb" id="vssvssb">?? ??</button>
@@ -561,6 +561,20 @@
               vsscs0f()
           }
       });
+
+
+      function vssas1f()
+      {
+          vssvssbf();
+      }
+      
+      document.getElementById("vssasid").addEventListener('input', function(){
+          if (this.selectedIndex==1)
+          {
+              vssas1f()
+          }
+      });
+
       
    </script>   
       
