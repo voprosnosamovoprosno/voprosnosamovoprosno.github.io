@@ -232,7 +232,7 @@
           <option disabled value="?о??????но?">?о??????но?</option>
           <option disabled value="?с??????но?">?с??????но?</option>
           <option disabled value="?н??????но?">?н??????но?</option>
-          <option disabled value="?отменённо?">?отменённо?</option>
+          <option value="?отменённо?">?отменённо?</option>
       </select>
      
     </div>
@@ -554,13 +554,16 @@
       }
       
       document.getElementById("vssasid").addEventListener('input', function(){
-          if (this.selectedIndex==1)
+          if(this.selectedIndex==1)
           {
-              vssas1f()
+              vssas1f();
+          }
+          if(this.selectedIndex==11)
+          {
+              vssas1f();
           }
       });
-
-      
+   
    </script>   
       
   </body>
