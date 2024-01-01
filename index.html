@@ -575,7 +575,7 @@
           }
           for (let vssi=0; vssi<12; vssi++)
           {
-              if (document.getElementById("vssvss000").style.display=='block')
+              if (document.getElementById("vssasid").value=="аддитивно")
               {
                   document.getElementById("vssvsssfrt"+vssi).value=document.getElementById("vsssfrt"+vssi).value;
                   document.getElementById("vssvsssfrt"+vssi).style.display=document.getElementById("vsssfrt"+vssi).style.display;
@@ -583,6 +583,8 @@
                   document.getElementById("vsssfrt"+vssi).value="";
               }
               else {
+                  document.getElementById("vsssfrt"+vssi).value="";
+                  document.getElementById("vsssfrt"+vssi).style.display='none';
                   document.getElementById("vssvsssfrt"+vssi).style.display='none';
               }
       }
