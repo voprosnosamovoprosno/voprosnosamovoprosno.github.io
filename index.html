@@ -565,7 +565,8 @@
           vssti=addEventListener('input', vsstif);
 
       document.getElementById("vsscscid").addEventListener('change', function() {
-          alert("??");
+          alert(this.options[this.selectedIndex].value);
+          alert(this.value);
       });
       
    </script>   
