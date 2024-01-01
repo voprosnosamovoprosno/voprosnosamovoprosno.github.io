@@ -546,6 +546,45 @@
                   document.getElementById("vssvsssfrt"+vssi).style.display='none';
               }
           }
+              document.getElementById("всс0").innerHTML="???";
+              document.getElementById("всс1").innerHTML="????";
+              document.getElementById("всс2").innerHTML="??????";
+              document.getElementById("всс3").innerHTML="?????????";
+              document.getElementById("всс4").innerHTML="???";
+              document.getElementById("всс5").innerHTML="????вопросно";
+              document.getElementById("всс7").innerHTML="";
+              document.getElementById("всс8").innerHTML="";
+              
+              document.getElementById("всс7").style.display='none';
+              document.getElementById("всс8").style.display='none';
+
+              document.getElementById("vsstid7").value="";
+              document.getElementById("vsstid8").value="";
+            
+              document.getElementById("vsstid7").style.display='none';
+              document.getElementById("vsstid8").style.display='none';
+              document.getElementById("vsstbid").style.display='none';
+            
+              vssuarbf("?0?");
+              vssuarbf("?1?");
+              vssuarbf("?2?");
+              vssuarbf("?3?");
+              vssuarbf("?4?");
+              vssuarbf("?5?");
+              vssuarbf("?6?");
+          }
+          for (let vssi=0; vssi<12; vssi++)
+          {
+              if (document.getElementById("vssvss000").style.display=='block')
+              {
+                  document.getElementById("vssvsssfrt"+vssi).value=document.getElementById("vsssfrt"+vssi).value;
+                  document.getElementById("vssvsssfrt"+vssi).style.display=document.getElementById("vsssfrt"+vssi).style.display;
+                  document.getElementById("vsssfrt"+vssi).style.display='none';
+                  document.getElementById("vsssfrt"+vssi).value="";
+              }
+              else {
+                  document.getElementById("vssvsssfrt"+vssi).style.display='none';
+              }
       }
       
       document.getElementById("vssasid").addEventListener('input', function(){
