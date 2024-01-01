@@ -209,7 +209,7 @@
       <label><input type="radio" id="vssr" name="?5?" value="спец">???спец?</label><br>
       <label><input type="radio" id="vssr" name="?5?" value="ново">???ново?</label><br>
       <label><input type="radio" id="vssr" name="?5?" value="орфо">???орфо?</label><br>
-      
+      <br>
       <select class="vsscsc" id="vsscsid" size="12">
           <option value="?словесно?">?словесно?</option>
           <option disabled value="?аудиовопросительно?">?аудиовопросительно?</option>
@@ -554,7 +554,7 @@
            }
       }
       
-      document.getElementById("vsscsid").addEventListener('change', function(){
+      document.getElementById("vsscsid").addEventListener('input', function(){
           if (this.selectedIndex==0)
           {
               vsscs0f()
