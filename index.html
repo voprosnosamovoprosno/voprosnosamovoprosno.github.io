@@ -468,31 +468,7 @@
                document.getElementById("vsstbid").style.display='none';
       }
 
-      function vssas0f()
-      {
-              document.getElementById("vssvss0").innerHTML=document.getElementById("всс0").innerHTML;
-              document.getElementById("vssvss1").innerHTML=document.getElementById("всс1").innerHTML;
-              document.getElementById("vssvss2").innerHTML=document.getElementById("всс2").innerHTML;
-              document.getElementById("vssvss3").innerHTML=document.getElementById("всс3").innerHTML;
-              document.getElementById("vssvss4").innerHTML=document.getElementById("всс4").innerHTML;
-              document.getElementById("vssvss5").innerHTML=document.getElementById("всс5").innerHTML;
-              document.getElementById("vssvss7").innerHTML=document.getElementById("всс7").innerHTML;
-              document.getElementById("vssvss8").innerHTML=document.getElementById("всс8").innerHTML;
-            
-              document.getElementById("vssvss000").style.display='block';
-              document.getElementById("vssvss0").style.display='block';
-              document.getElementById("vssvss1").style.display='block';
-              document.getElementById("vssvss2").style.display='block';
-              document.getElementById("vssvss3").style.display='block';
-              document.getElementById("vssvss4").style.display='block';
-              document.getElementById("vssvss5").style.display='block';
-              document.getElementById("vssvss12").style.display='block';
-              if (document.getElementById("всс7").style.display=='block')
-              {
-                  document.getElementById("vssvss7").style.display='block';
-                  document.getElementById("vssvss8").style.display='block';
-              }       
-        
+      function vssdf(){  
               document.getElementById("всс0").innerHTML="???";
               document.getElementById("всс1").innerHTML="????";
               document.getElementById("всс2").innerHTML="??????";
@@ -514,22 +490,52 @@
               vssuarbf("?6?");
         
           for (let vssi=0; vssi<12; vssi++)
-          {
-              if (document.getElementById("vssvss000").style.display=='block')
               {
-                  document.getElementById("vssvsssfrt"+vssi).value=document.getElementById("vsssfrt"+vssi).value;
-                  document.getElementById("vssvsssfrt"+vssi).style.display=document.getElementById("vsssfrt"+vssi).style.display;
                   document.getElementById("vsssfrt"+vssi).style.display='none';
                   document.getElementById("vsssfrt"+vssi).value="";
               }
-              else {
-                  document.getElementById("vssvsssfrt"+vssi).style.display='none';
-              }
+      }
+
+      function vssas0f(){
+              document.getElementById("vssvss0").innerHTML=document.getElementById("всс0").innerHTML;
+              document.getElementById("vssvss1").innerHTML=document.getElementById("всс1").innerHTML;
+              document.getElementById("vssvss2").innerHTML=document.getElementById("всс2").innerHTML;
+              document.getElementById("vssvss3").innerHTML=document.getElementById("всс3").innerHTML;
+              document.getElementById("vssvss4").innerHTML=document.getElementById("всс4").innerHTML;
+              document.getElementById("vssvss5").innerHTML=document.getElementById("всс5").innerHTML;
+              document.getElementById("vssvss7").innerHTML=document.getElementById("всс7").innerHTML;
+              document.getElementById("vssvss8").innerHTML=document.getElementById("всс8").innerHTML;
+            
+              document.getElementById("vssvss000").style.display='block';
+              document.getElementById("vssvss0").style.display='block';
+              document.getElementById("vssvss1").style.display='block';
+              document.getElementById("vssvss2").style.display='block';
+              document.getElementById("vssvss3").style.display='block';
+              document.getElementById("vssvss4").style.display='block';
+              document.getElementById("vssvss5").style.display='block';
+              document.getElementById("vssvss12").style.display='block';
+              if (document.getElementById("всс7").style.display=='block')
+              {
+                  document.getElementById("vssvss7").style.display='block';
+                  document.getElementById("vssvss8").style.display='block';
+              }    
+              vssdf();
           }
       }
 
       function vssas11_0f()
       {
+              document.getElementById("vssvss000").innerHTML="";
+              document.getElementById("vssvss0").innerHTML="";
+              document.getElementById("vssvss1").innerHTML="";
+              document.getElementById("vssvss2").innerHTML="";
+              document.getElementById("vssvss3").innerHTML="";
+              document.getElementById("vssvss4").innerHTML="";
+              document.getElementById("vssvss5").innerHTML="";
+              document.getElementById("vssvss7").innerHTML="";
+              document.getElementById("vssvss8").innerHTML="";
+              document.getElementById("vssvss12").innerHTML="";
+            
               document.getElementById("vssvss000").style.display='none';
               document.getElementById("vssvss0").style.display='none';
               document.getElementById("vssvss1").style.display='none';
@@ -537,37 +543,16 @@
               document.getElementById("vssvss3").style.display='none';
               document.getElementById("vssvss4").style.display='none';
               document.getElementById("vssvss5").style.display='none';
-              document.getElementById("vssvss12").style.display='none';
               document.getElementById("vssvss7").style.display='none';
-              document.getElementById("vssvss8").style.display='none';   
-
-              document.getElementById("всс0").innerHTML="???";
-              document.getElementById("всс1").innerHTML="????";
-              document.getElementById("всс2").innerHTML="??????";
-              document.getElementById("всс3").innerHTML="?????????";
-              document.getElementById("всс4").innerHTML="???";
-              document.getElementById("всс5").innerHTML="????вопросно";
-              document.getElementById("всс7").innerHTML="";
-              document.getElementById("всс8").innerHTML="";
+              document.getElementById("vssvss8").style.display='none';
+              document.getElementById("vssvss12").style.display='none';
               
-              document.getElementById("всс7").style.display='none';
-              document.getElementById("всс8").style.display='none';
-
-              vssuarbf("?0?");
-              vssuarbf("?1?");
-              vssuarbf("?2?");
-              vssuarbf("?3?");
-              vssuarbf("?4?");
-              vssuarbf("?5?");
-              vssuarbf("?6?");
-
               for (let vssi=0; vssi<12; vssi++)
               {
                   document.getElementById("vssvsssfrt"+vssi).value="";
                   document.getElementById("vssvsssfrt"+vssi).style.display='none';
-                  document.getElementById("vsssfrt"+vssi).style.display='none';
-                  document.getElementById("vsssfrt"+vssi).value="";
               }
+              vssdf();
       }
   
       document.getElementById("vssasid").addEventListener('input', function(){
