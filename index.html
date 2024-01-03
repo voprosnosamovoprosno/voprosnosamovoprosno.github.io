@@ -436,10 +436,6 @@
                     document.getElementById("всс3").innerHTML=vss3tl;
            }
       }
-      
-      document.getElementById("vsscsid").addEventListener('input', function(){
-          document.getElementById("vssasid").value="";
-      });
 
       function vssas1f()
       {
@@ -589,50 +585,18 @@
       });
                                                           
       document.getElementById("vssasid").addEventListener('input', function(){
-      /*  if(this.value=="?сделанно?")
-          {
-              if(document.getElementById("vsscsid").value=="??")
-              {
-                   vssas1f();
-              }
-          }
-      */
           if(this.value=="?аддитивно?")
           {
-       /*     if(document.getElementById("vsscsid").value=="??")
-              {
-                  vssas0_1f();       
-              }
-              if(document.getElementById("vsscsid").value=="?символьно?")
-              {  
-                  vssas1_1f();
-              }
-       */
               vssas0_1f();
           }
           if(this.value=="?отменённо?")
           {
-         /*   if(document.getElementById("vsscsid").value=="??")
-              {
-                  vssas0_11f();
+              vssas0_11f();
 
-                  document.getElementById("vsstid8").value="";
-                  document.getElementById("vsstid7").value="";
-                  vssas1f();
-              }
-              if(document.getElementById("vsscsid").value=="?символьно?")
-              {
-                  document.getElementById("vsstid8").value="";
-                  document.getElementById("vsstid7").value="";
-                  vssas1f();
-              }
-         */
-                  vssas0_11f();
-
-                  document.getElementById("vsstid8").value="";
-                  document.getElementById("vsstid7").value="";
-                  document.getElementById("vsstid7").style.display='none';
-                  document.getElementById("vsstid8").style.display='none';
+              document.getElementById("vsstid8").value="";
+              document.getElementById("vsstid7").value="";
+              document.getElementById("vsstid7").style.display='none';
+              document.getElementById("vsstid8").style.display='none';
           } 
       });
       
