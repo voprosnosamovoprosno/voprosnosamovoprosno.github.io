@@ -585,10 +585,11 @@
       });
 
       document.getElementById("vssasid").addEventListener('click', function(){
-          alert(this.value);
+          alert(this.selectedIndex);
+      //  this.selectedIndex=0;
           this.options[this.selectedIndex].selected=false;
-          this.value="";
           alert(this.options[this.selectedIndex].selected);
+          alert(this.selectedIndex);
       }
                                                           
       document.getElementById("vssasid").addEventListener('input', function(){
