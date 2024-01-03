@@ -585,8 +585,10 @@
       });
 
       document.getElementById("vssasid").addEventListener('click', function(){
-          this.options[this.selectedIndex].selected=false;
+          alert(this.value);
           this.value="";
+          alert(this.selectedIndex);
+          this.selectedIndex=-1;
           alert(this.options[this.selectedIndex].selected);
       });
                                                           
