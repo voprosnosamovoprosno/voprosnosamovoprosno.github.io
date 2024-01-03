@@ -114,6 +114,13 @@
         outline: none;
         color: black;
       }
+
+      .vssvbc {
+        font-size: x-large;
+        border-color: white;
+        outline: none;
+        color: black;
+      }
       
    </style>
     
@@ -167,8 +174,8 @@
     <label><input type="radio" id="vssr" name="?3?" value="надёжно?">???????надёжно?</label><br>
     <label><input type="radio" id="vssr" name="?3?" value="обиходно?">???????обиходно?</label><br>
 
-    <button id="vssvbid">????????????????</button>
-    <br>
+    <button class="vssvbc" id="vssvbid">????????????????</button>
+    <br><br>
     <select class="vssmc" id="vssmid" size="12">
           <option selected value="?селективно?">?селективно?</option>
           <option disabled value="?аутентификационно?">?аутентификационно?</option>
@@ -578,7 +585,7 @@
               vssdf();
       }
 
-      document.getElementById("vssvbid").addEventListener('input', function(){
+      document.getElementById("vssvbid").addEventListener('click', function(){
             if(document.getElementById("vsstid8").style.display='block')
             {
                 vssas1f();
