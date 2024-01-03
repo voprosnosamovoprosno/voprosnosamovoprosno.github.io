@@ -120,6 +120,13 @@
         outline: none;
         color: black;
       }
+
+      .vssvvbc {
+        display: none;
+        font-size: x-large;
+        outline: none;
+        color: black;
+      }
       
    </style>
     
@@ -328,6 +335,7 @@
       
       <input type="text" id="vsstid7" class="vsst" autocapitalize="off">
       <input type="text" id="vsstid8" class="vsst" autocapitalize="off">
+      <button class="vssvvbc" id="vssvvbid">????????????????</button>
       <br>
       <div id="всс4">???</div>
       <div id="всс5">????вопросно</div>
@@ -483,8 +491,7 @@
                document.getElementById("всс3").innerHTML=vss3tl;
                document.getElementById("vsstid7").style.display='none';
                document.getElementById("vsstid8").style.display='none';
-               
-               document.documentElement.requestFullscreen();
+               document.getElementById("vssvvbid").style.display='none';
       }
 
       function vssdf(){  
@@ -577,6 +584,10 @@
               }
               vssdf();
       }
+
+      document.getElementById("vssvvbid").addEventListener('click', function(){
+            vssas1f();
+      });
 
       document.getElementById("vssvbid").addEventListener('click', function(){
             if(document.getElementById("vsstid8").style.display=='block')
