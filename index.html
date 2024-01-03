@@ -35,7 +35,7 @@
          top: 18px;
          left: 21px;
          font-size: x-large;
-         }     
+         }
       
       .vss4div {
          position: absolute;
@@ -167,8 +167,8 @@
     <label><input type="radio" id="vssr" name="?3?" value="надёжно?">???????надёжно?</label><br>
     <label><input type="radio" id="vssr" name="?3?" value="обиходно?">???????обиходно?</label><br>
 
-    <div>????????????????</div>
-
+    <input type="button" id="vssvbid">????????????????</input>
+    <br>
     <select class="vssmc" id="vssmid" size="12">
           <option selected value="?селективно?">?селективно?</option>
           <option disabled value="?аутентификационно?">?аутентификационно?</option>
@@ -222,10 +222,9 @@
       <label><input type="radio" id="vssr" name="?5?" value="ново">???ново?</label><br>
       <label><input type="radio" id="vssr" name="?5?" value="орфо">???орфо?</label><br>
       <br>
-      <select class="vsscsc" id="vsscsid" size="13">
-          <option value="??">??</option>
-          <option value="?символьно?">?символьно?</option>
-          <option disabled value="?аудиословесно?">?аудиословесно?</option>
+      <select class="vsscsc" id="vsscsid" size="12">
+          <option disabled value="?словесно?">?словесно?</option>
+          <option disabled value="?а??????но?">?а??????но?</option>
           <option disabled value="?мелодично?">?мелодично?</option>
           <option disabled value="?отфотографированно?">?отфотографированно?</option>
           <option disabled value="?видеоэпизодно?">?видеоэпизодно?</option>
@@ -239,7 +238,7 @@
       </select>
       <br>
       <select class="vssasc" id="vssasid" size="12">
-          <option value="?сделанно?">?сделанно?</option>
+          <option disabled value="?сделанно?">?сделанно?</option>
           <option value="?аддитивно?">?аддитивно?</option>
           <option disabled value="?м??????но?">?м??????но?</option>
           <option disabled value="?о??????но?">?о??????но?</option>
@@ -578,9 +577,19 @@
               }
               vssdf();
       }
-  
+
+      document.getElementById("vssvbid").addEventListener('input', function(){
+            if(document.getElementById("vsstid8").style.display='block')
+            {
+                vssas1f();
+            }
+            else {
+                vssas1_1f();
+            }
+      });
+                                                          
       document.getElementById("vssasid").addEventListener('input', function(){
-          if(this.value=="?сделанно?")
+      /*  if(this.value=="?сделанно?")
           {
               if(document.getElementById("vsscsid").value=="??")
               {
@@ -591,9 +600,10 @@
                    vssas1f();
               }
           }
+      */
           if(this.value=="?аддитивно?")
           {
-              if(document.getElementById("vsscsid").value=="??")
+       /*     if(document.getElementById("vsscsid").value=="??")
               {
                   vssas0_1f();       
               }
@@ -601,10 +611,12 @@
               {  
                   vssas1_1f();
               }
+       */
+              vssas0_1f();
           }
           if(this.value=="?отменённо?")
           {
-              if(document.getElementById("vsscsid").value=="??")
+         /*   if(document.getElementById("vsscsid").value=="??")
               {
                   vssas0_11f();
 
@@ -618,6 +630,12 @@
                   document.getElementById("vsstid7").value="";
                   vssas1f();
               }
+         */
+                  vssas0_11f();
+
+                  document.getElementById("vsstid8").value="";
+                  document.getElementById("vsstid7").value="";
+                  vssas1f();
           } 
       });
       
