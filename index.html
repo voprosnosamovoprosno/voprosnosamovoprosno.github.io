@@ -583,6 +583,12 @@
                 vssas1_1f();
             }
       });
+
+      document.getElementById("vssasid").addEventListener('focus', function(){
+          alert("??");
+          this.options[this.selectedIndex].selected=false;
+          this.selectedIndex=-1;
+      });
                                                           
       document.getElementById("vssasid").addEventListener('input', function(){
           if(this.value=="?аддитивно?")
@@ -598,10 +604,6 @@
               document.getElementById("vsstid7").style.display='none';
               document.getElementById("vsstid8").style.display='none';
           }
-          this.options[this.selectedIndex].selected=false;
-          this.selectedIndex=-1;
-          alert(this.text);
-          this.text="?аддитивно?";
       });
       
    </script>   
