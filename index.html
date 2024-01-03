@@ -583,6 +583,10 @@
                 vssas1_1f();
             }
       });
+
+      document.getElementById("vssasid").addEventListener('click', function(){
+          this.value="";
+      });
                                                           
       document.getElementById("vssasid").addEventListener('input', function(){
           if(this.value=="?аддитивно?")
