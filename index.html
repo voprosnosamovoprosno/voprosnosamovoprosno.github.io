@@ -584,9 +584,9 @@
             }
       });
 
-      document.getElementById("vssasid").addEventListener('blur', function(){
-          alert(this.selectedIndex);
+      document.getElementById("vssasid").addEventListener('select', function(){
           alert(this.value);
+          alert(this.selectedIndex);
           alert(this.options[this.selectedIndex].selected);
       });
                                                           
