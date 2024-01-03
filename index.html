@@ -536,12 +536,10 @@
               document.getElementById("vssvss3").style.display='block';
               document.getElementById("vssvss4").style.display='block';
               document.getElementById("vssvss5").style.display='block';
+              document.getElementById("vssvss7").style.display=document.getElementById("всс7").style.display;
+              document.getElementById("vssvss8").style.display=document.getElementById("всс8").style.display;
               document.getElementById("vssvss12").style.display='block';
-              if (document.getElementById("всс7").style.display=='block')
-              {
-                  document.getElementById("vssvss7").style.display='block';
-                  document.getElementById("vssvss8").style.display='block';
-              }
+        
               for (let vssi=0; vssi<12; vssi++)
               {
                   document.getElementById("vssvsssfrt"+vssi).value=document.getElementById("vsssfrt"+vssi).value;
