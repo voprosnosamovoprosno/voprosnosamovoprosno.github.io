@@ -583,12 +583,6 @@
                 vssas1_1f();
             }
       });
-
-      document.getElementById("vssasid").addEventListener('select', function(){
-          alert(this.value);
-          alert(this.selectedIndex);
-          alert(this.options[this.selectedIndex].selected);
-      });
                                                           
       document.getElementById("vssasid").addEventListener('input', function(){
           if(this.value=="?аддитивно?")
@@ -603,7 +597,10 @@
               document.getElementById("vsstid7").value="";
               document.getElementById("vsstid7").style.display='none';
               document.getElementById("vsstid8").style.display='none';
-          }    
+          }
+          alert("??");
+          this.options[this.selectedIndex].selected=false;
+          this.selectedIndex=-1;
       });
       
    </script>   
