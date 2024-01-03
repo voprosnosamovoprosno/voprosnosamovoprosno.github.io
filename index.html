@@ -175,7 +175,7 @@
 
     <button class="vssvbc" id="vssvbid">????????????????</button>
      
-    <br><br><br><br><br>
+    <br><br><br><br><br><br>
     <div>?email??voprosnosamovoprosno@gmail.com?</div>
     <div>?advcash??voprosnosamovoprosno@gmail.com?</div>
      
@@ -226,8 +226,7 @@
           <option disabled value="?с??????но?">?с??????но?</option>
           <option disabled value="?н??????но?">?н??????но?</option>
           <option value="?отменённо?">?отменённо?</option>
-      </select>
-      <br>
+      </select><br>
       <select class="vsscsc" id="vsscsid" size="12">
           <option disabled value="?словесно?">?словесно?</option>
           <option disabled value="?а??????но?">?а??????но?</option>
@@ -241,8 +240,7 @@
           <option disabled value="?с??????но?">?с??????но?</option>
           <option disabled value="?н??????но?">?н??????но?</option>
           <option disabled value="?о??????но?">?о??????но?</option>
-      </select>
-      <br>
+      </select> <br>
       <select class="vssmc" id="vssmid" size="12">
           <option selected value="?селективно?">?селективно?</option>
           <option disabled value="?аутентификационно?">?аутентификационно?</option>
@@ -398,7 +396,7 @@
           }));
 
       function vssuarbf(vssrbn){
-          let vssrbl=document.getElementsByName(vssrbn);
+              let vssrbl=document.getElementsByName(vssrbn);
               for(let vssi=0; vssi<vssrbl.length; vssi++)
                 {    
                     vssrbl[vssi].checked=false;
@@ -595,13 +593,14 @@
       });
                                                           
       document.getElementById("vssasid").addEventListener('input', function(){
-        if(this.value=="?сделанно?")
+      /*  if(this.value=="?сделанно?")
           {
               if(document.getElementById("vsscsid").value=="??")
               {
                    vssas1f();
               }
           }
+      */
           if(this.value=="?аддитивно?")
           {
        /*     if(document.getElementById("vsscsid").value=="??")
