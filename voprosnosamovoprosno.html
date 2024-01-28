@@ -1,0 +1,37 @@
+<!datatype html><html><head><meta charset="utf-8"><title>?вопросносамовопросно?</title><link rel='shortcut icon' href='https://cdn.glitch.global/a1c30f5f-5a12-4404-a8ed-3b759d4c2f79/favicon.ico' type='image/x-icon'></head>
+ <body><style>.vssdc{font-family:arial;font-size:40;height:71;}.vss13dc{position:absolute;left:578;top:48;}.vsshdc{position:absolute;left:82;top:48;}.vsssc{display:inline;font-size:28;font-family:arial;width:0;height:0;border-color:white;outline:none;color:white;background-color:white;}</style>
+ <script>const vssav=[['?вопросно?','?самовопросно?','??','??','??','??','???вопросно?','?самовопросно?'],
+                      ['?самовопросно?'],
+                      ['?влюблённо?','?обнадёженно?','?признательно?','?радостно?','?очарованно?','?свободно?','?новационно?','?оптимистично?'],
+                      ['?склонно?','?азартно?','?магично?','?отрадно?','?воодушевлённо?','?облюбованно?','?прилежно?','?решительно?','?ободрительно?','?симпатично?','?наивно?','?осчастливленно?'],
+                      ['?сознательно?','?аналитично?','?ментально?','?объективно?','?вариационно?','?осмысленно?','?понятно?','?рассудочно?','?осознанно?','?складно?','?насущно?','?озарённо?'],
+                      ['?страстно?','?адаптивно?','?мотивационно?','?одухотворённо?','?вдохновительно?','?ознаменованно?','?приверженно?','?радетельно?','?однозначно?','?стратегично?','?надёжно?','?обиходно?'],
+                      ['?свое?','?архи?','?мета?','?онто?','?вехо?','?орто?','?пред?','?рост?','?окто?','?спец?','?ново?','?орфо?'],
+                      ['?самовопросно?'],    
+                      ['?субъектно?','?антропогенно?','?метафорично?','?органично?','?витально?','?обзорно?','?питательно?','?раритетно?','?оснащённо?','?сервисно?','?номинационно?','?организованно?'],];
+   function vssscf(vsssanv, vsssev, vssssndx){let vsssnol,vsssil;vsssev.options.length=0;for(vsssil=0;vsssil<vsssanv.length;vsssil++){if(vsssanv==vssav[6]){vsssnol=new Option(vsssanv[vsssil]+vssav[8][vsssil],vsssanv[vsssil]);}else{vsssnol=new Option(vsssanv[vsssil],vsssanv[vsssil]);}vsssev.append(vsssnol);if(vsssanv[vsssil].substring(1,3)=='??'){vsssev.options[vsssil].disabled=true;vsssev.options[vsssil].value=vsssanv[vsssil].substring(2,vsssanv[vsssil].length);vsssev.options[vsssil].text=vsssev.options[vsssil].value;}}vsssev.selectedIndex=vssssndx;}
+   function vsscef(vssetv,vssecv,vsseidv,vssepidv,vssehv){let vssel=document.createElement(vssetv);vssel.setAttribute('class',vssecv);vssel.setAttribute('id',vsseidv);if(vssepidv!=''){document.getElementById(vssepidv).appendChild(vssel);}else{document.body.appendChild(vssel);}if(vssehv!=''){vssel.innerHTML=vssehv;}return vssel;}  
+   vsscef('div','vss13dc','vss13did','','');vsscef('div','vsshdc','vsshdid','','');
+   for(let vssi=0;vssi<8;vssi++){vsscef('div','vssdc',vssi,'vss13did',vssav[0][vssi]);vsscef('div','vssdc',vssi+12,'vsshdid','');}
+   function vsssnvf()
+    {let vssl='';
+     for(let vssi=0;vssi<8;vssi++)
+      {if(vssi==0)
+       {vssl=vssl+document.getElementById(vssi).innerHTML;
+       }
+       else{
+            vssl=vssl+'\n'+document.getElementById(vssi).innerHTML;
+           }
+      }
+     let vssxl = new XMLHttpRequest(); 
+     vssxl.open('post', '/', false);
+     vssxl.send(vssl);
+     let vssal=vssxl.responseText.split('\n');
+     for(let vssj=0;vssj<8;vssj++)
+      {document.getElementById(vssj+12).innerHTML=vssal[vssj];
+       document.getElementById(vssj).innerHTML=vssav[0][vssj];
+      }
+    }
+   document.querySelectorAll('.vssdc').forEach(vssdv=>vssdv.addEventListener('click',function(){if(this.id==''||this.id=='vss13did'){return;}if(this.id=='0'){window.location.assign(window.location);return;}if(this.id=='7'){vsssnvf();return;}if(this.id=='1'){window.location.assign('voprosnosamovoprosno9.html');return;};let vsssl=vsscef('select','vsssc','?'+this.id+'?',this.id,'');vssscf(vssav[this.id],document.getElementById('?'+this.id+'?'),-1);vsssl.addEventListener('input',function(){if(this.id=='?6?'){this.parentNode.innerHTML=this.value.substring(0,5)+'вопросно?';}else{this.parentNode.innerHTML=this.value;}this.parentNode.removeChild(this);this.remove;});vsssl.addEventListener('blur',function(){this.parentNode.removeChild(this);this.remove;});vsssl.size=vsssl.options.length;vsssl.focus();})); 
+   //alert('??');
+ </script></body></html>
