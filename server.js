@@ -28,7 +28,6 @@ fastify.get("/", function (request, reply) {
   
   // params is an object we'll pass to our handlebars template
   let params = {
-    greeting: "Hello Node!",
     vssp:'??'
   };
   
@@ -38,33 +37,54 @@ fastify.get("/", function (request, reply) {
   return reply.view('voprosnosamovoprosno.html', params);
 
 });
-
+var vssv=0;
 // A POST route to handle form submissions
 fastify.post("/", function (request, reply) {
-  let params = {
-    //greeting:'??',
-      vssp:request.body
-  };
   
   console.log(request.body);
   
-  try {
-	let vsswl = fs.writeFileSync('file.txt',request.body); 
-	console.log('?file written?');
+  if(request.body=='?вопросносамовопросно?');
+  {try {
+	  var vssrnv = fs.readFileSync(vssv+'.txt','utf8'); 
+	  vssv=vssv+1;
+    console.log('?'+vssv+'.txt'+'?');
      } catch (err) {
-	console.log(err);
-    }
+	           console.log(err);
+             vssv=0;}
+    return vssrnv;
+  }
+
+  try {
+	    var vsscfv = fs.readFileSync('vss13.txt','utf8'); 
+	    console.log('?vss13.txt?'+'?'+vsscfv+'?');
+     } catch(err){
+	          console.log(err);
+            vsscfv='0';}
   
   try {
-	  let vssrl = fs.readFileSync('file.txt','utf8'); 
-	  console.log(vssrl);
+	let vsswl = fs.writeFileSync(vsscfv+'.txt',request.body); 
+	console.log('?'+vsscfv+'.txt'+'?');
      } catch (err) {
-	  console.log(err);
-    }
+	console.log(err);}
+  
+  try {
+	  var vssrv = fs.readFileSync(vsscfv+'.txt','utf8'); 
+	  console.log(vssrv);
+     } catch (err) {
+	  console.log(err);}
+  
+  vsscfv=vsscfv*1+1;
+  if(vsscfv>12){vsscfv=0;}
+  
+  try {
+	    let vsswl = fs.writeFileSync('vss13.txt',''+vsscfv); 
+	    console.log('?vss13.txt?'+'?'+vsscfv+'?');
+     } catch(err){
+	          console.log(err);}
   
   // request.body.paramName <-- a form post example
   // return reply.view("/src/pages/index.hbs", params);
-     return request.body;
+     return vssrv;
   });
 
 // Run the server and report out to the logs

@@ -13,6 +13,16 @@
    function vsscef(vssetv,vssecv,vsseidv,vssepidv,vssehv){let vssel=document.createElement(vssetv);vssel.setAttribute('class',vssecv);vssel.setAttribute('id',vsseidv);if(vssepidv!=''){document.getElementById(vssepidv).appendChild(vssel);}else{document.body.appendChild(vssel);}if(vssehv!=''){vssel.innerHTML=vssehv;}return vssel;}  
    vsscef('div','vss13dc','vss13did','','');vsscef('div','vsshdc','vsshdid','','');
    for(let vssi=0;vssi<8;vssi++){vsscef('div','vssdc',vssi,'vss13did',vssav[0][vssi]);vsscef('div','vssdc',vssi+12,'vsshdid','');}
+   var vssxl = new XMLHttpRequest();     
+   function vssdf(vssclrv)
+    {let vssal=vssxl.responseText.split('\n');
+     for(let vssj=0;vssj<8;vssj++)
+      {document.getElementById(vssj+12).innerHTML=vssal[vssj];
+       if(vssclrv==true)
+         {document.getElementById(vssj).innerHTML=vssav[0][vssj];
+         }
+      }
+    }
    function vsssnvf()
     {let vssl='';
      for(let vssi=0;vssi<8;vssi++)
@@ -23,15 +33,11 @@
             vssl=vssl+'\n'+document.getElementById(vssi).innerHTML;
            }
       }
-     let vssxl = new XMLHttpRequest(); 
      vssxl.open('post', '/', false);
      vssxl.send(vssl);
-     let vssal=vssxl.responseText.split('\n');
-     for(let vssj=0;vssj<8;vssj++)
-      {document.getElementById(vssj+12).innerHTML=vssal[vssj];
-       document.getElementById(vssj).innerHTML=vssav[0][vssj];
-      }
+     vssdf(true);
     }
-   document.querySelectorAll('.vssdc').forEach(vssdv=>vssdv.addEventListener('click',function(){if(this.id==''||this.id=='vss13did'){return;}if(this.id=='0'){window.location.assign(window.location);return;}if(this.id=='7'){vsssnvf();return;}if(this.id=='1'){window.location.assign('voprosnosamovoprosno9.html');return;};let vsssl=vsscef('select','vsssc','?'+this.id+'?',this.id,'');vssscf(vssav[this.id],document.getElementById('?'+this.id+'?'),-1);vsssl.addEventListener('input',function(){if(this.id=='?6?'){this.parentNode.innerHTML=this.value.substring(0,5)+'вопросно?';}else{this.parentNode.innerHTML=this.value;}this.parentNode.removeChild(this);this.remove;});vsssl.addEventListener('blur',function(){this.parentNode.removeChild(this);this.remove;});vsssl.size=vsssl.options.length;vsssl.focus();})); 
+   document.querySelectorAll('.vssdc').forEach(vssdv=>vssdv.addEventListener('click',function(){if(this.id==''||this.id=='vss13did'){return;}if(this.id=='0'){window.location.assign(window.location);return;}if(this.id=='7'){for(let vssi=2;vssi<7;vssi++){if(document.getElementById(vssi).innerHTML.substring(0,2)=='??'){return;}}vsssnvf();return;}if(this.id=='1'){window.location.assign('voprosnosamovoprosno9.html');return;};let vsssl=vsscef('select','vsssc','?'+this.id+'?',this.id,'');vssscf(vssav[this.id],document.getElementById('?'+this.id+'?'),-1);vsssl.addEventListener('input',function(){if(this.id=='?6?'){this.parentNode.innerHTML=this.value.substring(0,5)+'вопросно?';}else{this.parentNode.innerHTML=this.value;}this.parentNode.removeChild(this);this.remove;});vsssl.addEventListener('blur',function(){this.parentNode.removeChild(this);this.remove;});vsssl.size=vsssl.options.length;vsssl.focus();})); 
+   document.addEventListener('scroll',function(){vssxl.open('post', '/', false);vssxl.send('?вопросносамовопросно?');vssdf(false);});
    //alert('??');
  </script></body></html>
