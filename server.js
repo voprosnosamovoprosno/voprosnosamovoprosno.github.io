@@ -26,28 +26,31 @@ fastify.register(require("@fastify/view"), {
 // Our main GET home page route, pulls from src/pages/index.hbs
 fastify.get("/", function (request, reply) {
   
-  // params is an object we'll pass to our handlebars template
-  let params = {
-    vssp:'??'
-  };
+  console.log(request);
   
   // request.query.paramName <-- a querystring example
   //return reply.view("/src/pages/index.hbs", params);
   
-  return reply.view('voprosnosamovoprosno.html', params);
+  return reply.view('voprosnosamovoprosno.html');
 
 });
+
 var vssv=0;
+
 // A POST route to handle form submissions
 fastify.post("/", function (request, reply) {
   
   console.log(request.body);
   
-  if(request.body=='?вопросносамовопросно?');
+  if(request.body=='voprosnosamovoprosno9.html')
+    {return reply.view('voprosnosamovoprosno9.html');}
+  
+  if(request.body=='?вопросносамовопросно?')
   {try {
+    if(fs.existsSync(vssv+'.txt')==false){vssv=0;}
 	  var vssrnv = fs.readFileSync(vssv+'.txt','utf8'); 
-	  vssv=vssv+1;
     console.log('?'+vssv+'.txt'+'?');
+    vssv=vssv+1;
      } catch (err) {
 	           console.log(err);
              vssv=0;}
@@ -67,12 +70,6 @@ fastify.post("/", function (request, reply) {
      } catch (err) {
 	console.log(err);}
   
-  try {
-	  var vssrv = fs.readFileSync(vsscfv+'.txt','utf8'); 
-	  console.log(vssrv);
-     } catch (err) {
-	  console.log(err);}
-  
   vsscfv=vsscfv*1+1;
   if(vsscfv>12){vsscfv=0;}
   
@@ -84,7 +81,7 @@ fastify.post("/", function (request, reply) {
   
   // request.body.paramName <-- a form post example
   // return reply.view("/src/pages/index.hbs", params);
-     return vssrv;
+     return request.body;
   });
 
 // Run the server and report out to the logs
