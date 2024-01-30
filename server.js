@@ -25,28 +25,19 @@ fastify.register(require("@fastify/view"), {
 
 // Our main GET home page route, pulls from src/pages/index.hbs
 fastify.get("/", function (request, reply) {
-  
-  console.log(request);
-  
-  // request.query.paramName <-- a querystring example
-  //return reply.view("/src/pages/index.hbs", params);
-  
+  console.log('?vssget?');
   return reply.view('voprosnosamovoprosno.html');
-
 });
 
 var vssv=0;
 
 // A POST route to handle form submissions
 fastify.post("/", function (request, reply) {
-  
   console.log(request.body);
   
-  if(request.body=='voprosnosamovoprosno9.html')
-    {return reply.view('voprosnosamovoprosno9.html');}
-  
   if(request.body=='?вопросносамовопросно?')
-  {try {
+  {
+   try {
     if(fs.existsSync(vssv+'.txt')==false){vssv=0;}
 	  var vssrnv = fs.readFileSync(vssv+'.txt','utf8'); 
     console.log('?'+vssv+'.txt'+'?');
@@ -55,20 +46,22 @@ fastify.post("/", function (request, reply) {
 	           console.log(err);
              vssv=0;}
     return vssrnv;
-  }
-
+   }
+  
   try {
 	    var vsscfv = fs.readFileSync('vss13.txt','utf8'); 
 	    console.log('?vss13.txt?'+'?'+vsscfv+'?');
      } catch(err){
 	          console.log(err);
-            vsscfv='0';}
+            vsscfv='0';
+         }
   
   try {
-	let vsswl = fs.writeFileSync(vsscfv+'.txt',request.body); 
-	console.log('?'+vsscfv+'.txt'+'?');
+	  let vsswl = fs.writeFileSync(vsscfv+'.txt',request.body); 
+	  console.log('?'+vsscfv+'.txt'+'?');
      } catch (err) {
-	console.log(err);}
+	       console.log(err);
+       }
   
   vsscfv=vsscfv*1+1;
   if(vsscfv>12){vsscfv=0;}
@@ -77,11 +70,10 @@ fastify.post("/", function (request, reply) {
 	    let vsswl = fs.writeFileSync('vss13.txt',''+vsscfv); 
 	    console.log('?vss13.txt?'+'?'+vsscfv+'?');
      } catch(err){
-	          console.log(err);}
+	          console.log(err);
+        }
   
-  // request.body.paramName <-- a form post example
-  // return reply.view("/src/pages/index.hbs", params);
-     return request.body;
+   return request.body;
   });
 
 // Run the server and report out to the logs
@@ -92,6 +84,6 @@ fastify.listen(
       console.error(err);
       process.exit(1);
     }
-    console.log(`Your app is listening on ${address}`);
+    console.log(`?vss${address}?`);
   }
 );

@@ -14,30 +14,8 @@
    vsscef('div','vssdc','vssdid','','');vsscef('div','vss13dc','vss13did','vssdid','');vsscef('div','vsshdc','vsshdid','vssdid','');vsscef('div','vsspdc','vsspdid','vssdid','?почта??voprosnosamovoprosno.gmail.com?');
    for(let vssi=0;vssi<8;vssi++){vsscef('div','vssdc',vssi,'vss13did',vssav[0][vssi]);vsscef('div','vssdc',vssi+12,'vsshdid','');}
    var vssxl=new XMLHttpRequest();
-   function vssdf(vssclrv)
-    {let vssal=vssxl.responseText.split('\n');
-     if(vssal.length!=8){return;}
-     for(let vssj=0;vssj<8;vssj++)
-      {document.getElementById(vssj+12).innerHTML=vssal[vssj];
-       if(vssclrv==true)
-         {document.getElementById(vssj).innerHTML=vssav[0][vssj];
-         }
-      }
-    }
-   function vsssnvf()
-    {let vssl='';
-     for(let vssi=0;vssi<8;vssi++)
-      {if(vssi==0)
-       {vssl=vssl+document.getElementById(vssi).innerHTML;
-       }
-       else{
-            vssl=vssl+'\n'+document.getElementById(vssi).innerHTML;
-           }
-      }
-     vssxl.open('post', '/', false);
-     vssxl.send(vssl);
-     vssdf(true);
-    }
+   function vssdf(vssclrv){let vssal=vssxl.responseText.split('\n');if(vssal.length!=8){return;}for(let vssj=0;vssj<8;vssj++){document.getElementById(vssj+12).innerHTML=vssal[vssj];}}
+   function vsssnvf(){let vssl='';for(let vssi=0;vssi<8;vssi++){if(vssi==0){vssl=vssl+document.getElementById(vssi).innerHTML;}else{vssl=vssl+'\n'+document.getElementById(vssi).innerHTML;}}vssxl.open('post', '/', false);vssxl.send(vssl);vssdf(true);}
    document.querySelectorAll('.vssdc').forEach(vssdv=>vssdv.addEventListener('click',function(){if(this.id==''||this.id=='vss13did'){return;}if(this.id=='0'){window.location.assign(window.location);return;}if(this.id=='7'){for(let vssi=2;vssi<7;vssi++){if(document.getElementById(vssi).innerHTML.substring(0,2)=='??'){return;}}vsssnvf();return;}if(this.id=='1'){return;};let vsssl=vsscef('select','vsssc','?'+this.id+'?',this.id,'');vssscf(vssav[this.id],document.getElementById('?'+this.id+'?'),-1);vsssl.addEventListener('input',function(){if(this.id=='?6?'){this.parentNode.innerHTML=this.value.substring(0,5)+'вопросно?';}else{this.parentNode.innerHTML=this.value;}this.parentNode.removeChild(this);this.remove;});vsssl.addEventListener('blur',function(){this.parentNode.removeChild(this);this.remove;});vsssl.size=vsssl.options.length;vsssl.focus();})); 
    document.addEventListener('dblclick',function(){vssxl.open('post', '/', false);vssxl.send('?вопросносамовопросно?');vssdf(false);});
    //alert('??');
