@@ -75,7 +75,7 @@ fastify.post("/", async (request, reply) => {
    }
    else{let vssaml = await db.addMessage(request.body);
         console.log('?vssaddmessage'+vssaml+'?');
-        return request.body;
+        return;
        }
 });
 
