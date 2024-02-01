@@ -49,7 +49,6 @@ fastify.post("/", async (request, reply) => {
   console.log(request.body);
   if(request.body=='?вопросносамовопросно?')
    {let vssgml = await db.getMessages();
-     console.log(vssgml[0]);
     
     if(vssgml.length>12)
        {for(let vssj=0;vssj<vssgml.length-12;vssj++)
@@ -65,7 +64,7 @@ fastify.post("/", async (request, reply) => {
        {if(vssgml[vssi].message.substring(0,1)=='?')
          {vssmsl.push(vssgml[vssi].message);
          }else{vssdml=await db.deleteMessage(vssgml[vssi].id);
-              console.log('?vssdelmesid'+vssgml[vssi].id+vssdml+'?');
+              console.log('?vssdelbadmesid'+vssgml[vssi].id+vssdml+'?');
               }      
        }        
    //console.log('?vssmessages?'+'\n'+vssmsl);
@@ -81,12 +80,16 @@ fastify.post("/", async (request, reply) => {
 
 // Return the chat messages from the database helper script - no auth
 fastify.get("/messages", async (request, reply) => {
-  let data = {};
+  console.log('?get/messages?');
+ // return replay.view('voprosnosamovoprosno9.html');
+ 
+  /*let data = {};
   data.chat = await db.getMessages();
   console.log(data.chat);
   if(!data.chat) data.error = errorMessage;
   const status = data.error ? 400 : 200;
   reply.status(status).send(data);
+  */
 });
 
 // Add new message (auth)
@@ -105,12 +108,15 @@ fastify.post("/message", async (request, reply) => {
 
 // Update text for an message (auth)
 fastify.put("/message", async (request, reply) => { 
-  let data = {};
+  console.log(request.body);
+  return replay.view('voprosnosamovoprosno9.html');
+  /*let data = {};
   const auth = authorized(request.headers.admin_key);
   if(!auth || !request.body || !request.body.id || !request.body.message) data.success = false;
   else data.success = await db.updateMessage(request.body.id, request.body.message); 
   const status = data.success ? 201 : auth ? 400 : 401;
   reply.status(status).send(data);
+  */
 });
 
 // Delete a message (auth)
