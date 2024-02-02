@@ -57,8 +57,8 @@ fastify.post("/", async (request, reply) => {
          }
         vssgml = await db.getMessages();
         console.log('?vssmsgsqnt'+vssgml.length+'?'); 
-       }
-            
+       }    
+    
      let vssmsl=[];
      for(let vssi=0;vssi<vssgml.length;vssi++)
        {if(vssgml[vssi].message.substring(0,1)=='?')
