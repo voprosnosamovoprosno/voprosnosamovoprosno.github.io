@@ -45,11 +45,11 @@ function randomInteger(min, max) {
   return Math.floor(rand);
 }
 
-fastify.post("/", async (request, reply) => {
-  console.log(request.body);
-  if(request.body=='?вопросносамовопросно?')
-   {let vssgml = await db.getMessages();
-    
+var vssmsl=[];
+
+async function vssmsf()
+  {let vssgml = await db.getMessages();
+    console.log('?vssgml.length'+vssgml.length+'?');
     if(vssgml.length>12)
        {for(let vssj=0;vssj<vssgml.length-12;vssj++)
          {vssdml=await db.deleteMessage(vssgml[vssj].id);
@@ -58,52 +58,35 @@ fastify.post("/", async (request, reply) => {
         vssgml = await db.getMessages();
         console.log('?vssmsgsqnt'+vssgml.length+'?'); 
        }    
-    
-     let vssmsl=[];
+     vssmsl=[];
      for(let vssi=0;vssi<vssgml.length;vssi++)
-       {if(vssgml[vssi].message.substring(0,1)=='?')
+       {if(vssgml[vssi].message.substring(0,1)=='?'&&vssgml[vssi].message.length>65)
          {vssmsl.push(vssgml[vssi].message);
          }else{vssdml=await db.deleteMessage(vssgml[vssi].id);
-              console.log('?vssdelbadmesid'+vssgml[vssi].id+vssdml+'?');
+              console.log('?vssdelarrmesid'+vssgml[vssi].id+vssdml+'?');
               }      
-       }        
-   //console.log('?vssmessages?'+'\n'+vssmsl);
+       }
+     
+  }
+
+fastify.post("/", async (request, reply) => {
+  console.log(request.body);
+  if(request.body=='?вопросносамовопросно?')
+   {if(vssmsl.length==0){vssmsf();}
      let vssri=randomInteger(0,vssmsl.length-1);
      console.log('?vssrandom'+vssri+'?');
      return vssmsl[vssri];
    }
-   else{let vssaml = await db.addMessage(request.body);
-        console.log('?vssaddmessage'+vssaml+'?');
-        return;
-       }
 });
 
-// Return the chat messages from the database helper script - no auth
-fastify.get("/messages", async (request, reply) => {
-  console.log('?get/messages?');
- // return replay.view('voprosnosamovoprosno9.html');
- 
-  /*let data = {};
-  data.chat = await db.getMessages();
-  console.log(data.chat);
-  if(!data.chat) data.error = errorMessage;
-  const status = data.error ? 400 : 200;
-  reply.status(status).send(data);
-  */
+fastify.post("/vssadd", async (request, reply) => {
+  let vssaml = await db.addMessage(request.body);
+  console.log('?vssaddmessage'+vssaml+'?');
+  vssmsf();
 });
 
-// Add new message (auth)
-fastify.post("/message", async (request, reply) => {
-  let vssl = await db.getMessages();
-  console.log(vssl[0]);
-  return vssl[0];
-/*let data = {};
-  const auth = authorized(request.headers.admin_key);
-  if(!auth || !request.body || !request.body.message) data.success = false;
-  else if(auth) data.success = await db.addMessage(request.body.message);
-  const status = data.success ? 201 : auth ? 400 : 401;
-  reply.status(status).send(data);
-*/
+fastify.get("/vssxs", async (request, reply) => {
+  console.log('?vssxs?');
 });
 
 // Update text for an message (auth)
