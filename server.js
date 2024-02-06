@@ -50,6 +50,7 @@ var vssmsl=[];
 async function vssmsf()
   {let vssgml = await db.getMessages();
     console.log('?vssgml.length'+vssgml.length+'?');
+    console.log(vssgml);
     if(vssgml.length>12)
        {for(let vssj=0;vssj<vssgml.length-12;vssj++)
          {vssdml=await db.deleteMessage(vssgml[vssj].id);
@@ -82,6 +83,7 @@ fastify.post("/", async (request, reply) => {
 fastify.post("/vssadd", async (request, reply) => {
   let vssaml = await db.addMessage(request.body);
   console.log('?vssaddmessage'+vssaml+'?');
+  console.log(request.body);
   vssmsf();
 });
 
