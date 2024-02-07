@@ -27,14 +27,7 @@ dbWrapper
         await db.run(
           "CREATE TABLE Messages (id INTEGER PRIMARY KEY AUTOINCREMENT, message TEXT)"
         );
-       /*for (let r = 0; r < 5; r++)
-          await db.run(
-            "INSERT INTO Messages (message) VALUES (?)",
-            casual.catch_phrase
-          );
-        */
       }
-      console.log(await db.all("SELECT * from Messages"));
     } catch (dbError) {
       console.error(dbError);
     }
