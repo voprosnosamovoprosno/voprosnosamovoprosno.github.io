@@ -39,45 +39,40 @@ fastify.get("/", (request, reply) => {
   return reply.view('voprosnosamovoprosno.html');
 });
 
-function randomInteger(min, max) {
-  // случайное число от min до (max+1)
-  let rand = min + Math.random() * (max + 1 - min);
-  return Math.floor(rand);
-}
-
-var vssmsl=[];
+var vssgml=null;
 
 async function vssmsf()
-  {let vssgml = await db.getMessages();
+   {let vssbvl=false;
+    vssgml = await db.getMessages();
     console.log('?vssgml.length'+vssgml.length+'?');
-    //console.log(vssgml);
-    if(vssgml.length>12)
-       {for(let vssj=0;vssj<vssgml.length-12;vssj++)
-         {vssdml=await db.deleteMessage(vssgml[vssj].id);
-          console.log('?vssdelmesid'+vssgml[vssj].id+vssdml+'?');
-         }
-        vssgml = await db.getMessages();
-        console.log('?vssmsgsqnt'+vssgml.length+'?'); 
-       }    
-     vssmsl=[];
-     for(let vssi=0;vssi<vssgml.length;vssi++)
-       {if(vssgml[vssi].message.substring(0,1)=='?'&&vssgml[vssi].message.length>65)
-         {vssmsl.push(vssgml[vssi].message);
-         }else{vssdml=await db.deleteMessage(vssgml[vssi].id);
-              console.log('?vssdelarrmesid'+vssgml[vssi].id+vssdml+'?');
-              }      
-       }
-     
+    for(let vssj=0;vssj<vssgml.length;vssj++)
+      {if(vssj<vssgml.length-12)
+        {vssdml=await db.deleteMessage(vssgml[vssj].id);
+         vssbvl=true;
+         console.log('?vssdelmesid'+vssgml[vssj].id+vssdml+'?');
+        }else{if(vssgml[vssj].message[0]!='?')
+               {vssdml=await db.deleteMessage(vssgml[vssj].id);
+                vssbvl=true;
+                console.log('?vssdelarrmesid'+vssgml[vssj].id+vssdml+'?');
+               }
+             }
+      }   
+    if(vssbvl==true)
+     {vssgml = await db.getMessages();
+      console.log('?vssmsgsqnt'+vssgml.length+'?');
+     }
   }
 
 fastify.post("/", async (request, reply) => {
-  console.log(request.body);
-  if(request.body=='?вопросносамовопросно?')
-   {if(vssmsl.length==0){vssmsf();}
-     let vssri=randomInteger(0,vssmsl.length-1);
-     console.log('?vssrandom'+vssri+'?');
-     return vssmsl[vssri];
-   }
+  console.log('?'+request.body+'?');
+  if(vssgml==null){await vssmsf();}
+  let vssindxvl=request.body*1;
+  if(vssindxvl>=vssgml.length)
+    {vssindxvl=vssindxvl-(vssindxvl-vssgml.length+1);
+     console.log('?vssindxvl'+vssindxvl+'?');
+    }
+  if(vssindxvl>=0)
+  {return vssgml[vssindxvl].message;}  
 });
 
 fastify.post("/vssadd", async (request, reply) => {
