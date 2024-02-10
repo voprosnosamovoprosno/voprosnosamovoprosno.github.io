@@ -47,15 +47,17 @@ async function vssmsf()
      }
   }
 fastify.post("/", async (request, reply) => {
-  console.log('?'+request.body+'?');
-  if(vssgml==null){await vssmsf();}
-  let vssindxvl=request.body*1;
-  if(vssindxvl>=vssgml.length)
-    {vssindxvl=vssindxvl-(vssindxvl-vssgml.length+1);
-     console.log('?vssindxvl'+vssindxvl+'?');
+ if(vssgml==null){await vssmsf();}
+ if(request.body!=-1)
+  {for(vssi=vssgml.length-1;vssi>0;vssi--)
+    {if(vssgml[vssi].vssid==request.body)
+      {console.log('?vssgml[vssi].vssid'+vssgml[vssi-1].vssid+'?');
+       return vssgml[vssi-1].vsstxt+vssgml[vssi-1].vssid;
+   }}}
+  if(vssgml.length-1>=0)
+    {console.log('?vssgml[vssgml.length-1].vssid'+vssgml[vssgml.length-1].vssid+'?');
+     return vssgml[vssgml.length-1].vsstxt+vssgml[vssgml.length-1].vssid;
     }
-  if(vssindxvl>=0)
-  {return vssgml[vssindxvl].vsstxt;}  
 });
 fastify.post("/vssadd", async (request, reply) => {
   let vssaml = await db.vssaddf(request.body);
